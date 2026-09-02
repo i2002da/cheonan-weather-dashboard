@@ -97,8 +97,7 @@
     justify-content: space-evenly;
     padding: 1vh 0;
   }
-  .day-card .d-date { font-size: 1.3rem; color: #64748b; font-weight: 500; }
-  .day-card .d-label { font-size: clamp(1.6rem, 4vh, 2.6rem); color: #f1f5f9; font-weight: 700; }
+  .day-card .d-date { font-size: clamp(1.8rem, 4.6vh, 3rem); color: #f1f5f9; font-weight: 800; }
   .day-card .d-icon { font-size: clamp(2.6rem, 8vh, 5.5rem); }
   .day-card .d-cond { font-size: 1.4rem; color: #cbd5e1; }
   .day-card .d-temps { font-size: clamp(1.6rem, 4.5vh, 2.8rem); font-weight: 700; }
@@ -225,7 +224,6 @@
 
 <script>
 const WEEKDAYS = ['일','월','화','수','목','금','토'];
-const DAY_LABELS = ['오늘','내일','모레','글피'];
 
 function condIcon(cond) {
   switch (cond) {
@@ -280,12 +278,10 @@ function renderDaily(daily) {
     const mm = String(dateObj.getMonth() + 1).padStart(2, '0');
     const dd = String(dateObj.getDate()).padStart(2, '0');
     const wd = WEEKDAYS[dateObj.getDay()];
-    const label = DAY_LABELS[idx] || `${idx}일 후`;
     const card = document.createElement('div');
     card.className = 'day-card';
     card.innerHTML = `
       <div class="d-date">${mm}/${dd} (${wd})</div>
-      <div class="d-label">${label}</div>
       <div class="d-icon">${condIcon(d.condition)}</div>
       <div class="d-cond">${d.condition}</div>
       <div class="d-temps"><span class="tmax">${d.tempMax != null ? d.tempMax.toFixed(0) : '--'}°</span><span class="tmin">${d.tempMin != null ? d.tempMin.toFixed(0) : '--'}°</span></div>
