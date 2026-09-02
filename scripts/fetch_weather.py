@@ -114,9 +114,15 @@ def main():
         pops = [int(by_key[(d, t, "POP")]) for t in times_today if (d, t, "POP") in by_key]
         pop_max = max(pops) if pops else None
 
-        noon_t = min(times_today, key=lambda t: abs(int(t[:2]) - 12)) if times_today else None
-        sky_noon = by_key.get((d, noon_t, "SKY")) if noon_t else None
-        pty_noon = by_key.get((d, noon_t, "PTY")) if noon_t else None
+        am_times = [t for t in times_today if int(t[:2]) < 12]
+        pm_times = [t for t in times_today if int(t[:2]) >= 12]
+        am_t = min(am_times, key=lambda t: abs(int(t[:2]) - 9)) if am_times else None
+        pm_t = min(pm_times, key=lambda t: abs(int(t[:2]) - 15)) if pm_times else None
+
+        def cond_at(t):
+            if t is None:
+                return None
+            return sky_pty_to_desc(by_key.get((d, t, "SKY")), by_key.get((d, t, "PTY")))
 
         daily.append(
             {
@@ -124,7 +130,8 @@ def main():
                 "tempMax": tmx_val,
                 "tempMin": tmn_val,
                 "precipProb": pop_max,
-                "condition": sky_pty_to_desc(sky_noon, pty_noon),
+                "amCondition": cond_at(am_t),
+                "pmCondition": cond_at(pm_t),
             }
         )
 
