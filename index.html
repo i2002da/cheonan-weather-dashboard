@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>천안 성성동 날씨 · 체감온도 대시보드</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    background: #0f172a;
+    color: #e2e8f0;
+    font-family: -apple-system, "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5vh 1.5vw;
+    overflow: hidden;
+  }
+  .header {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 1vh;
+  }
+  .header h1 { font-size: 2.4rem; color: #f1f5f9; }
+  .header .loc { font-size: 1.3rem; color: #94a3b8; }
+  .main {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.4vw;
+  }
+
+  /* ---------- LEFT: weather (2/3) ---------- */
+  .weather-col {
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2vh;
+  }
+  .panel {
+    background: #1e293b;
+    border-radius: 16px;
+    padding: 1.4vh 1.4vw;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+  .panel-title {
+    font-size: 1.5rem;
+    color: #cbd5e1;
+    font-weight: 600;
+    margin-bottom: 0.8vh;
+    border-left: 6px solid #38bdf8;
+    padding-left: 10px;
+  }
+
+  .hourly-panel { flex: 1 1 42%; }
+  .hourly-row {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.8vw;
+  }
+  .hour-card {
+    background: #0f172a;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0.5vh 0;
+  }
+  .hour-card .h-time { font-size: 1.5rem; color: #94a3b8; font-weight: 600; }
+  .hour-card .h-icon { font-size: clamp(2rem, 5.5vh, 4rem); }
+  .hour-card .h-temp { font-size: clamp(1.8rem, 5vh, 3.4rem); color: #fb923c; font-weight: 700; }
+  .hour-card .h-cond { font-size: 1.2rem; color: #cbd5e1; }
+  .hour-card .h-pop { font-size: clamp(1.4rem, 3.4vh, 2.2rem); color: #38bdf8; font-weight: 700; }
+
+  .daily-panel { flex: 1 1 58%; }
+  .daily-row {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1vw;
+  }
+  .day-card {
+    background: #0f172a;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1vh 0;
+  }
+  .day-card .d-date { font-size: 1.3rem; color: #64748b; font-weight: 500; }
+  .day-card .d-label { font-size: clamp(1.6rem, 4vh, 2.6rem); color: #f1f5f9; font-weight: 700; }
+  .day-card .d-icon { font-size: clamp(2.6rem, 8vh, 5.5rem); }
+  .day-card .d-cond { font-size: 1.4rem; color: #cbd5e1; }
+  .day-card .d-temps { font-size: clamp(1.6rem, 4.5vh, 2.8rem); font-weight: 700; }
+  .day-card .d-temps .tmax { color: #fb923c; }
+  .day-card .d-temps .tmin { color: #60a5fa; margin-left: 0.4em; }
+  .day-card .d-pop-label { font-size: 1.3rem; color: #64748b; margin-top: 0.2vh; }
+  .day-card .d-pop { font-size: clamp(2rem, 6vh, 3.6rem); color: #38bdf8; font-weight: 800; }
+
+  /* ---------- RIGHT: sensolink sites (1/3) ---------- */
+  .sites-col {
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2vh;
+  }
+  .site-block {
+    flex: 1 1 50%;
+    min-height: 0;
+    background: #1e293b;
+    border-radius: 16px;
+    padding: 1.2vh 1.2vw;
+    display: flex;
+    flex-direction: column;
+  }
+  .site-block h2 {
+    font-size: 1.5rem;
+    color: #f1f5f9;
+    border-left: 6px solid #34d399;
+    padding-left: 10px;
+    margin-bottom: 0.6vh;
+    flex: 0 0 auto;
+  }
+  .hero-card {
+    flex: 1.3 1 0;
+    min-height: 0;
+    background: #0f172a;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.7vh;
+  }
+  .hero-card .label { font-size: 1.2rem; color: #94a3b8; }
+  .hero-card .hero-value { font-size: clamp(2.6rem, 8vh, 6.5rem); color: #fb923c; font-weight: 800; line-height: 1; }
+  .sub-cards {
+    flex: 1 1 0;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6vw;
+  }
+  .card {
+    background: #0f172a;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .card .label { font-size: 1.05rem; color: #94a3b8; }
+  .card .value { font-size: clamp(1.6rem, 4.6vh, 3.2rem); font-weight: 700; }
+  .card.temp .value { color: #38bdf8; }
+  .card.hum .value { color: #34d399; }
+  .time-line { font-size: 1rem; color: #64748b; text-align: center; margin-top: 0.4vh; }
+
+  footer {
+    flex: 0 0 auto;
+    text-align: center;
+    color: #64748b;
+    font-size: 1rem;
+    padding-top: 0.6vh;
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <h1>천안 성성동 날씨 &amp; 체감온도</h1>
+    <div class="loc" id="locName">천안시 서북구 성성동</div>
+  </div>
+
+  <div class="main">
+    <div class="weather-col">
+      <div class="panel hourly-panel">
+        <div class="panel-title">시간별 예보</div>
+        <div class="hourly-row" id="hourlyRow"></div>
+      </div>
+      <div class="panel daily-panel">
+        <div class="panel-title">4일간 일기예보</div>
+        <div class="daily-row" id="dailyRow"></div>
+      </div>
+    </div>
+
+    <div class="sites-col">
+      <div class="site-block" id="site5Block">
+        <h2>천안아이파크 5단지</h2>
+        <div class="hero-card">
+          <div class="label">체감온도</div>
+          <div class="hero-value" id="s5-perceived">--</div>
+        </div>
+        <div class="sub-cards">
+          <div class="card temp"><div class="label">온도</div><div class="value" id="s5-temp">--</div></div>
+          <div class="card hum"><div class="label">습도</div><div class="value" id="s5-hum">--</div></div>
+        </div>
+        <div class="time-line">발생일시: <span id="s5-time">--</span></div>
+      </div>
+
+      <div class="site-block" id="site6Block">
+        <h2>천안아이파크 6단지</h2>
+        <div class="hero-card">
+          <div class="label">체감온도</div>
+          <div class="hero-value" id="s6-perceived">--</div>
+        </div>
+        <div class="sub-cards">
+          <div class="card temp"><div class="label">온도</div><div class="value" id="s6-temp">--</div></div>
+          <div class="card hum"><div class="label">습도</div><div class="value" id="s6-hum">--</div></div>
+        </div>
+        <div class="time-line">발생일시: <span id="s6-time">--</span></div>
+      </div>
+    </div>
+  </div>
+
+  <footer id="status">로딩 중...</footer>
+
+<script>
+const WEEKDAYS = ['일','월','화','수','목','금','토'];
+const DAY_LABELS = ['오늘','내일','모레','글피'];
+
+function condIcon(cond) {
+  switch (cond) {
+    case '맑음': return '☀️';
+    case '구름많음': return '⛅';
+    case '흐림': return '☁️';
+    case '비': return '🌧️';
+    case '비/눈': return '🌨️';
+    case '눈': return '❄️';
+    case '소나기': return '🌦️';
+    default: return '🌤️';
+  }
+}
+
+function parseKmaDate(d) {
+  // d = 'YYYYMMDD'
+  return new Date(`${d.slice(0,4)}-${d.slice(4,6)}-${d.slice(6,8)}T00:00:00+09:00`);
+}
+
+function formatKST(date) {
+  const parts = new Intl.DateTimeFormat('sv-SE', {
+    timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit', day: '2-digit',
+    hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false
+  }).formatToParts(date);
+  const get = t => parts.find(p => p.type === t).value;
+  return `${get('year')}-${get('month')}-${get('day')} ${get('hour')}:${get('minute')}:${get('second')} KST`;
+}
+
+function renderHourly(hourly) {
+  const row = document.getElementById('hourlyRow');
+  row.innerHTML = '';
+  hourly.forEach(h => {
+    const hour = h.time.slice(0,2);
+    const card = document.createElement('div');
+    card.className = 'hour-card';
+    card.innerHTML = `
+      <div class="h-time">${hour}시</div>
+      <div class="h-icon">${condIcon(h.condition)}</div>
+      <div class="h-temp">${h.temperature != null ? h.temperature.toFixed(0) : '--'}°</div>
+      <div class="h-cond">${h.condition}</div>
+      <div class="h-pop">${h.precipProb != null ? h.precipProb : '--'}%</div>
+    `;
+    row.appendChild(card);
+  });
+}
+
+function renderDaily(daily) {
+  const row = document.getElementById('dailyRow');
+  row.innerHTML = '';
+  daily.forEach((d, idx) => {
+    const dateObj = parseKmaDate(d.date);
+    const mm = String(dateObj.getMonth() + 1).padStart(2, '0');
+    const dd = String(dateObj.getDate()).padStart(2, '0');
+    const wd = WEEKDAYS[dateObj.getDay()];
+    const label = DAY_LABELS[idx] || `${idx}일 후`;
+    const card = document.createElement('div');
+    card.className = 'day-card';
+    card.innerHTML = `
+      <div class="d-date">${mm}/${dd} (${wd})</div>
+      <div class="d-label">${label}</div>
+      <div class="d-icon">${condIcon(d.condition)}</div>
+      <div class="d-cond">${d.condition}</div>
+      <div class="d-temps"><span class="tmax">${d.tempMax != null ? d.tempMax.toFixed(0) : '--'}°</span><span class="tmin">${d.tempMin != null ? d.tempMin.toFixed(0) : '--'}°</span></div>
+      <div class="d-pop-label">강수확률</div>
+      <div class="d-pop">${d.precipProb != null ? d.precipProb : '--'}%</div>
+    `;
+    row.appendChild(card);
+  });
+}
+
+function renderSite(prefix, site) {
+  if (!site) return;
+  document.getElementById(`${prefix}-perceived`).textContent =
+    site.perceivedTemperature != null ? `${Number(site.perceivedTemperature).toFixed(1)}°` : '--';
+  document.getElementById(`${prefix}-temp`).textContent =
+    site.temperature != null ? `${Number(site.temperature).toFixed(1)}°` : '--';
+  document.getElementById(`${prefix}-hum`).textContent =
+    site.humidity != null ? `${Number(site.humidity).toFixed(0)}%` : '--';
+  document.getElementById(`${prefix}-time`).textContent =
+    site.occurredAt ? formatKST(new Date(site.occurredAt.replace(' ', 'T') + '+09:00')) : '--';
+}
+
+async function load() {
+  try {
+    const res = await fetch(`./data.json?_=${Date.now()}`, { cache: 'no-store' });
+    const data = await res.json();
+
+    if (data.weather) {
+      document.getElementById('locName').textContent = data.weather.location || '';
+      renderHourly(data.weather.hourly || []);
+      renderDaily(data.weather.daily || []);
+    }
+    renderSite('s5', data.site5);
+    renderSite('s6', data.site6);
+
+    const now = new Date();
+    document.getElementById('status').textContent =
+      `마지막 확인(내 화면): ${formatKST(now)} · 서버 데이터 수집: ${formatKST(new Date(data.updatedAt))}`;
+  } catch (e) {
+    document.getElementById('status').textContent = '데이터 로드 실패: ' + e.message;
+  }
+}
+
+load();
+setInterval(load, 60000);
+</script>
+</body>
+</html>
