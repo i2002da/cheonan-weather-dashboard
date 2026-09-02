@@ -23,8 +23,20 @@ jobs:
       - name: Fetch KMA weather forecast
         env:
           KMA_SERVICE_KEY: ${{ secrets.KMA_SERVICE_KEY }}
+        continue-on-error: true
         run: |
-          python3 scripts/fetch_weather.py
+          # Seed weather.json with the previous run's weather data first.
+          # If the KMA API call below fails (it occasionally times out),
+          # this fallback is left in place instead of aborting the whole job
+          # (which would otherwise also skip the sensolink site5/site6 steps).
+          if [ -f data.json ]; then
+            jq '.weather // {}' data.json > weather.json
+          else
+            echo '{}' > weather.json
+          fi
+
+          python3 scripts/fetch_weather.py || echo "::warning::KMA weather fetch failed, keeping previous weather data"
+
           echo "---- weather.json ----"
           cat weather.json
 
