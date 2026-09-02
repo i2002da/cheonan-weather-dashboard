@@ -1,0 +1,117 @@
+name: Fetch Cheonan Weather + Sensolink Data
+
+on:
+  schedule:
+    - cron: '2-59/5 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Fetch KMA weather forecast
+        env:
+          KMA_SERVICE_KEY: ${{ secrets.KMA_SERVICE_KEY }}
+        run: |
+          python3 scripts/fetch_weather.py
+          echo "---- weather.json ----"
+          cat weather.json
+
+      - name: Fetch site 5 (천안아이파크 5단지)
+        env:
+          SENSOLINK_ID: ${{ secrets.SENSOLINK_ID }}
+          SENSOLINK_PW: ${{ secrets.SENSOLINK_PW }}
+        run: |
+          set -e
+          COOKIE_JAR=cookies5.txt
+
+          curl -s -c "$COOKIE_JAR" -b "$COOKIE_JAR" -L \
+            -X POST "https://www.sensolink.kr/login_proc.do" \
+            -H "Cache-Control: no-cache" -H "Pragma: no-cache" \
+            --data-urlencode "user_id=$SENSOLINK_ID" \
+            --data-urlencode "user_pw=$SENSOLINK_PW" \
+            -o /dev/null
+
+          NOW=$(TZ='Asia/Seoul' date +%Y-%m-%d\ %H:%M:%S)
+          FROM=$(TZ='Asia/Seoul' date -d '-2 hours' +%Y-%m-%d\ %H:%M:%S)
+          NONCE=$(date +%s%N)
+
+          RESPONSE=$(curl -s -c "$COOKIE_JAR" -b "$COOKIE_JAR" \
+            -X POST "https://www.sensolink.kr/wbgt/getWbgtData.json?_ts=$NONCE" \
+            -H "Content-Type: application/json" \
+            -H "Cache-Control: no-cache" -H "Pragma: no-cache" \
+            -d "{\"url\":\"wbgt/getWbgtData.json\",\"btntype\":\"I\",\"scnId\":\"S000000188\",\"trmnlId\":\"WB-9000090\",\"sdtm\":\"$FROM\",\"edtm\":\"$NOW\"}")
+
+          echo "$RESPONSE" | jq '{
+            name: "천안아이파크 5단지",
+            perceivedTemperature: (.wbgt[0].perceivedTemperature1 // null),
+            temperature: (.wbgt[0].taTemperature // null),
+            humidity: (.wbgt[0].humidity // null),
+            occurredAt: (.wbgt[0].ocrnDt // null)
+          }' > site5.json
+
+          echo "---- site5.json ----"
+          cat site5.json
+
+      - name: Fetch site 6 (천안아이파크 6단지)
+        env:
+          SENSOLINK_ID_6: ${{ secrets.SENSOLINK_ID_6 }}
+          SENSOLINK_PW_6: ${{ secrets.SENSOLINK_PW_6 }}
+        run: |
+          set -e
+          COOKIE_JAR=cookies6.txt
+
+          curl -s -c "$COOKIE_JAR" -b "$COOKIE_JAR" -L \
+            -X POST "https://www.sensolink.kr/login_proc.do" \
+            -H "Cache-Control: no-cache" -H "Pragma: no-cache" \
+            --data-urlencode "user_id=$SENSOLINK_ID_6" \
+            --data-urlencode "user_pw=$SENSOLINK_PW_6" \
+            -o /dev/null
+
+          NOW=$(TZ='Asia/Seoul' date +%Y-%m-%d\ %H:%M:%S)
+          FROM=$(TZ='Asia/Seoul' date -d '-2 hours' +%Y-%m-%d\ %H:%M:%S)
+          NONCE=$(date +%s%N)
+
+          RESPONSE=$(curl -s -c "$COOKIE_JAR" -b "$COOKIE_JAR" \
+            -X POST "https://www.sensolink.kr/wbgt/getWbgtData.json?_ts=$NONCE" \
+            -H "Content-Type: application/json" \
+            -H "Cache-Control: no-cache" -H "Pragma: no-cache" \
+            -d "{\"url\":\"wbgt/getWbgtData.json\",\"btntype\":\"I\",\"scnId\":\"S000000272\",\"trmnlId\":\"WB-9000167\",\"sdtm\":\"$FROM\",\"edtm\":\"$NOW\"}")
+
+          echo "$RESPONSE" | jq '{
+            name: "천안아이파크 6단지",
+            perceivedTemperature: (.wbgt[0].perceivedTemperature1 // null),
+            temperature: (.wbgt[0].taTemperature // null),
+            humidity: (.wbgt[0].humidity // null),
+            occurredAt: (.wbgt[0].ocrnDt // null)
+          }' > site6.json
+
+          echo "---- site6.json ----"
+          cat site6.json
+
+      - name: Combine into data.json
+        run: |
+          jq -n --slurpfile s5 site5.json --slurpfile s6 site6.json --slurpfile w weather.json \
+            '{ site5: $s5[0], site6: $s6[0], weather: $w[0], updatedAt: (now | strftime("%Y-%m-%dT%H:%M:%SZ")) }' \
+            > data.json
+          echo "---- data.json ----"
+          cat data.json
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data.json
+          git diff --staged --quiet || git commit -m "Update data $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push
