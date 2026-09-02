@@ -54,6 +54,41 @@ def sky_pty_to_desc(sky, pty):
     return sky_map.get(sky, "-")
 
 
+def dominant_condition(by_key, date_s, times):
+    """Representative AM/PM condition for a set of hourly slots.
+
+    A single "closest to 9am/3pm" sample can land right on a transition
+    (e.g. overcast overnight clearing up exactly at 09:00) and look
+    misleadingly sunny. Instead, vote across every hour in the window:
+    if any hour has precipitation, show the most common precipitation
+    type; otherwise show the most common sky condition (ties broken
+    toward the cloudier reading, matching how KMA's own site leans).
+    """
+    if not times:
+        return None
+
+    pty_counts = {}
+    sky_counts = {}
+    for t in times:
+        pty = by_key.get((date_s, t, "PTY"))
+        sky = by_key.get((date_s, t, "SKY"))
+        if pty and pty != "0":
+            pty_counts[pty] = pty_counts.get(pty, 0) + 1
+        if sky:
+            sky_counts[sky] = sky_counts.get(sky, 0) + 1
+
+    if pty_counts:
+        best_pty = max(pty_counts.items(), key=lambda kv: kv[1])[0]
+        return sky_pty_to_desc(None, best_pty)
+
+    if sky_counts:
+        severity = {"1": 1, "3": 2, "4": 3}
+        best_sky = max(sky_counts.items(), key=lambda kv: (kv[1], severity.get(kv[0], 0)))[0]
+        return sky_pty_to_desc(best_sky, "0")
+
+    return None
+
+
 def main():
     now_kst = datetime.now(KST)
     base_dt = pick_base_datetime(now_kst)
@@ -116,13 +151,6 @@ def main():
 
         am_times = [t for t in times_today if int(t[:2]) < 12]
         pm_times = [t for t in times_today if int(t[:2]) >= 12]
-        am_t = min(am_times, key=lambda t: abs(int(t[:2]) - 9)) if am_times else None
-        pm_t = min(pm_times, key=lambda t: abs(int(t[:2]) - 15)) if pm_times else None
-
-        def cond_at(t):
-            if t is None:
-                return None
-            return sky_pty_to_desc(by_key.get((d, t, "SKY")), by_key.get((d, t, "PTY")))
 
         daily.append(
             {
@@ -130,8 +158,8 @@ def main():
                 "tempMax": tmx_val,
                 "tempMin": tmn_val,
                 "precipProb": pop_max,
-                "amCondition": cond_at(am_t),
-                "pmCondition": cond_at(pm_t),
+                "amCondition": dominant_condition(by_key, d, am_times),
+                "pmCondition": dominant_condition(by_key, d, pm_times),
             }
         )
 
