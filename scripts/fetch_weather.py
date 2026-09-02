@@ -73,32 +73,28 @@ def main():
     def dt_of(date_s, time_s):
         return datetime.strptime(date_s + time_s, "%Y%m%d%H%M").replace(tzinfo=KST)
 
-    now_floor = now_kst.replace(minute=0, second=0, microsecond=0)
-    future_dt = [(d, t) for (d, t) in all_datetimes if dt_of(d, t) >= now_floor]
+    # Strictly after "now" (not the current, still-ongoing hour), then take
+    # every other hourly entry so consecutive picks are 2 hours apart.
+    future_dt = [(d, t) for (d, t) in all_datetimes if dt_of(d, t) > now_kst]
+    selected_dt = future_dt[0::2][:6]
 
     hourly = []
-    step = 0
-    for (d, t) in future_dt:
-        hour = int(t[:2])
-        if hour % 3 == 0:
-            temp = by_key.get((d, t, "TMP"))
-            sky = by_key.get((d, t, "SKY"))
-            pty = by_key.get((d, t, "PTY"))
-            pop = by_key.get((d, t, "POP"))
-            hourly.append(
-                {
-                    "date": d,
-                    "time": t,
-                    "temperature": float(temp) if temp is not None else None,
-                    "condition": sky_pty_to_desc(sky, pty),
-                    "sky": sky,
-                    "pty": pty,
-                    "precipProb": int(pop) if pop is not None else None,
-                }
-            )
-            step += 1
-        if step >= 6:
-            break
+    for (d, t) in selected_dt:
+        temp = by_key.get((d, t, "TMP"))
+        sky = by_key.get((d, t, "SKY"))
+        pty = by_key.get((d, t, "PTY"))
+        pop = by_key.get((d, t, "POP"))
+        hourly.append(
+            {
+                "date": d,
+                "time": t,
+                "temperature": float(temp) if temp is not None else None,
+                "condition": sky_pty_to_desc(sky, pty),
+                "sky": sky,
+                "pty": pty,
+                "precipProb": int(pop) if pop is not None else None,
+            }
+        )
 
     dates_all = sorted(set(d for (d, t) in all_datetimes))
     daily = []
