@@ -1,4 +1,4 @@
-import json, os, urllib.request
+import json, os, time, urllib.request, urllib.error
 from datetime import datetime, timedelta, timezone
 
 KST = timezone(timedelta(hours=9))
@@ -20,18 +20,28 @@ def pick_base_datetime(now_kst):
     return max(candidates)
 
 
-def fetch_vilage_fcst(base_date, base_time):
+def fetch_vilage_fcst(base_date, base_time, attempts=3, timeout=25, backoff=6):
     url = (
         "https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst"
         f"?serviceKey={SERVICE_KEY_RAW}&numOfRows=1000&pageNo=1&dataType=JSON"
         f"&base_date={base_date}&base_time={base_time}&nx={NX}&ny={NY}"
     )
-    with urllib.request.urlopen(url, timeout=20) as res:
-        data = json.load(res)
-    header = data["response"]["header"]
-    if header["resultCode"] != "00":
-        raise RuntimeError(f"KMA API error: {header}")
-    return data["response"]["body"]["items"]["item"]
+    last_err = None
+    for i in range(1, attempts + 1):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "cheonan-weather-dashboard"})
+            with urllib.request.urlopen(req, timeout=timeout) as res:
+                data = json.load(res)
+            header = data["response"]["header"]
+            if header["resultCode"] != "00":
+                raise RuntimeError(f"KMA API error: {header}")
+            return data["response"]["body"]["items"]["item"]
+        except (urllib.error.URLError, TimeoutError, OSError, RuntimeError, KeyError, ValueError) as e:
+            last_err = e
+            print(f"[attempt {i}/{attempts}] KMA fetch failed: {e}")
+            if i < attempts:
+                time.sleep(backoff * i)
+    raise RuntimeError(f"KMA fetch failed after {attempts} attempts: {last_err}")
 
 
 def sky_pty_to_desc(sky, pty):
