@@ -17,12 +17,12 @@
     "location": "충남 천안시 서북구 성성동 (천안농협하나로 성성점 인근)",
     "baseDate": "20260903",
     "baseTime": "0500",
-    "generatedAt": "2026-09-03T05:50:18+09:00",
+    "generatedAt": "2026-09-03T06:10:19+09:00",
     "hourly": [
       {
         "date": "20260903",
-        "time": "0600",
-        "temperature": 21.0,
+        "time": "0700",
+        "temperature": 22.0,
         "condition": "흐림",
         "sky": "4",
         "pty": "0",
@@ -30,17 +30,8 @@
       },
       {
         "date": "20260903",
-        "time": "0800",
-        "temperature": 23.0,
-        "condition": "구름많음",
-        "sky": "3",
-        "pty": "0",
-        "precipProb": 20
-      },
-      {
-        "date": "20260903",
-        "time": "1000",
-        "temperature": 26.0,
+        "time": "0900",
+        "temperature": 24.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -48,8 +39,8 @@
       },
       {
         "date": "20260903",
-        "time": "1200",
-        "temperature": 28.0,
+        "time": "1100",
+        "temperature": 27.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -57,7 +48,16 @@
       },
       {
         "date": "20260903",
-        "time": "1400",
+        "time": "1300",
+        "temperature": 29.0,
+        "condition": "맑음",
+        "sky": "1",
+        "pty": "0",
+        "precipProb": 0
+      },
+      {
+        "date": "20260903",
+        "time": "1500",
         "temperature": 30.0,
         "condition": "맑음",
         "sky": "1",
@@ -66,8 +66,8 @@
       },
       {
         "date": "20260903",
-        "time": "1600",
-        "temperature": 30.0,
+        "time": "1700",
+        "temperature": 29.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -109,5 +109,5 @@
       }
     ]
   },
-  "updatedAt": "2026-09-02T21:06:56Z"
+  "updatedAt": "2026-09-02T21:10:26Z"
 }
