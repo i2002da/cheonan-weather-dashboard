@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>천안 성성동 날씨 · 체감온도 대시보드 (모바일)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0f172a;
+    color: #e2e8f0;
+    font-family: -apple-system, "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+    padding: 16px 14px 28px;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  header { padding-bottom: 12px; }
+  header h1 { font-size: 1.5rem; color: #f1f5f9; }
+  header .loc { font-size: 0.9rem; color: #94a3b8; margin-top: 2px; }
+
+  .section-title {
+    font-size: 1.15rem;
+    color: #cbd5e1;
+    font-weight: 600;
+    border-left: 5px solid #38bdf8;
+    padding-left: 8px;
+    margin: 18px 0 8px;
+  }
+
+  /* sites */
+  .site-block {
+    background: #1e293b;
+    border-radius: 14px;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+  }
+  .site-block h2 {
+    font-size: 1.1rem;
+    color: #f1f5f9;
+    border-left: 5px solid #34d399;
+    padding-left: 8px;
+    margin-bottom: 8px;
+  }
+  .hero-card {
+    background: #0f172a;
+    border-radius: 10px;
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .hero-card .label { font-size: 0.85rem; color: #94a3b8; }
+  .hero-card .hero-value { font-size: 2.6rem; color: #fb923c; font-weight: 800; line-height: 1.15; }
+  .sub-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .card {
+    background: #0f172a;
+    border-radius: 10px;
+    padding: 8px 0;
+    text-align: center;
+  }
+  .card .label { font-size: 0.8rem; color: #94a3b8; }
+  .card .value { font-size: 1.5rem; font-weight: 700; }
+  .card.temp .value { color: #38bdf8; }
+  .card.hum .value { color: #34d399; }
+  .time-line { font-size: 0.75rem; color: #64748b; text-align: center; margin-top: 6px; }
+
+  /* hourly */
+  .hourly-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  .hour-card {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+  .hour-card .h-time { font-size: 1.1rem; color: #94a3b8; font-weight: 600; }
+  .hour-card .h-icon { font-size: 1.8rem; }
+  .hour-card .h-temp { font-size: 1.4rem; color: #fb923c; font-weight: 700; }
+  .hour-card .h-cond { font-size: 0.75rem; color: #cbd5e1; }
+  .hour-card .h-pop { font-size: 0.95rem; color: #38bdf8; font-weight: 700; }
+
+  /* daily */
+  .daily-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .day-card {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 10px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  .day-card .d-date { font-size: 1.15rem; color: #f1f5f9; font-weight: 800; }
+  .day-card .d-weekday { color: #94a3b8; font-size: 0.85em; }
+  .day-card .d-periods { display: flex; gap: 10px; }
+  .day-card .d-period { display: flex; flex-direction: column; align-items: center; }
+  .day-card .d-period-label { font-size: 0.7rem; color: #64748b; font-weight: 600; }
+  .day-card .d-period-icon { font-size: 1.4rem; }
+  .day-card .d-period-cond { font-size: 0.7rem; color: #cbd5e1; }
+  .day-card .d-period-cond.empty { color: #475569; }
+  .day-card .d-temps { font-size: 1.2rem; font-weight: 700; }
+  .day-card .d-temps .tmax { color: #fb923c; }
+  .day-card .d-temps .tmin { color: #60a5fa; margin-left: 0.4em; }
+  .day-card .d-pop-label { font-size: 0.7rem; color: #64748b; margin-top: 1px; }
+  .day-card .d-pop { font-size: 1.5rem; color: #38bdf8; font-weight: 800; }
+
+  footer {
+    text-align: center;
+    color: #64748b;
+    font-size: 0.75rem;
+    padding-top: 18px;
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>천안 성성동 날씨 &amp; 체감온도</h1>
+    <div class="loc" id="locName">천안시 서북구 성성동</div>
+  </header>
+
+  <div class="section-title">체감온도 · 5, 6단지</div>
+  <div class="site-block" id="site5Block">
+    <h2>천안아이파크 5단지</h2>
+    <div class="hero-card">
+      <div class="label">체감온도</div>
+      <div class="hero-value" id="s5-perceived">--</div>
+    </div>
+    <div class="sub-cards">
+      <div class="card temp"><div class="label">온도</div><div class="value" id="s5-temp">--</div></div>
+      <div class="card hum"><div class="label">습도</div><div class="value" id="s5-hum">--</div></div>
+    </div>
+    <div class="time-line">발생일시: <span id="s5-time">--</span></div>
+  </div>
+
+  <div class="site-block" id="site6Block">
+    <h2>천안아이파크 6단지</h2>
+    <div class="hero-card">
+      <div class="label">체감온도</div>
+      <div class="hero-value" id="s6-perceived">--</div>
+    </div>
+    <div class="sub-cards">
+      <div class="card temp"><div class="label">온도</div><div class="value" id="s6-temp">--</div></div>
+      <div class="card hum"><div class="label">습도</div><div class="value" id="s6-hum">--</div></div>
+    </div>
+    <div class="time-line">발생일시: <span id="s6-time">--</span></div>
+  </div>
+
+  <div class="section-title">시간별 예보</div>
+  <div class="hourly-row" id="hourlyRow"></div>
+
+  <div class="section-title">4일간 일기예보</div>
+  <div class="daily-row" id="dailyRow"></div>
+
+  <footer id="status">로딩 중...</footer>
+
+<script>
+const WEEKDAYS = ['日','月','火','水','木','金','土'];
+
+function condIcon(cond) {
+  switch (cond) {
+    case '맑음': return '☀️';
+    case '구름많음': return '⛅';
+    case '흐림': return '☁️';
+    case '비': return '🌧️';
+    case '비/눈': return '🌨️';
+    case '눈': return '❄️';
+    case '소나기': return '🌦️';
+    default: return '🌤️';
+  }
+}
+
+function parseKmaDate(d) {
+  return new Date(`${d.slice(0,4)}-${d.slice(4,6)}-${d.slice(6,8)}T00:00:00+09:00`);
+}
+
+function formatKST(date) {
+  const parts = new Intl.DateTimeFormat('sv-SE', {
+    timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit', day: '2-digit',
+    hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false
+  }).formatToParts(date);
+  const get = t => parts.find(p => p.type === t).value;
+  return `${get('year')}-${get('month')}-${get('day')} ${get('hour')}:${get('minute')}:${get('second')} KST`;
+}
+
+function renderHourly(hourly) {
+  const row = document.getElementById('hourlyRow');
+  row.innerHTML = '';
+  hourly.forEach(h => {
+    const hour = h.time.slice(0,2);
+    const card = document.createElement('div');
+    card.className = 'hour-card';
+    card.innerHTML = `
+      <div class="h-time">${hour}시</div>
+      <div class="h-icon">${condIcon(h.condition)}</div>
+      <div class="h-temp">${h.temperature != null ? h.temperature.toFixed(0) : '--'}°</div>
+      <div class="h-cond">${h.condition}</div>
+      <div class="h-pop">${h.precipProb != null ? h.precipProb : '--'}%</div>
+    `;
+    row.appendChild(card);
+  });
+}
+
+function renderDaily(daily) {
+  const row = document.getElementById('dailyRow');
+  row.innerHTML = '';
+  daily.forEach(d => {
+    const dateObj = parseKmaDate(d.date);
+    const mm = String(dateObj.getMonth() + 1).padStart(2, '0');
+    const dd = String(dateObj.getDate()).padStart(2, '0');
+    const wd = WEEKDAYS[dateObj.getDay()];
+    const am = d.amCondition;
+    const pm = d.pmCondition;
+    const card = document.createElement('div');
+    card.className = 'day-card';
+    card.innerHTML = `
+      <div class="d-date">${mm}/${dd} <span class="d-weekday">(${wd})</span></div>
+      <div class="d-periods">
+        <div class="d-period">
+          <div class="d-period-label">오전</div>
+          <div class="d-period-icon">${am ? condIcon(am) : '–'}</div>
+          <div class="d-period-cond${am ? '' : ' empty'}">${am || '-'}</div>
+        </div>
+        <div class="d-period">
+          <div class="d-period-label">오후</div>
+          <div class="d-period-icon">${pm ? condIcon(pm) : '–'}</div>
+          <div class="d-period-cond${pm ? '' : ' empty'}">${pm || '-'}</div>
+        </div>
+      </div>
+      <div class="d-temps"><span class="tmax">${d.tempMax != null ? d.tempMax.toFixed(0) : '--'}°</span><span class="tmin">${d.tempMin != null ? d.tempMin.toFixed(0) : '--'}°</span></div>
+      <div class="d-pop-label">강수확률</div>
+      <div class="d-pop">${d.precipProb != null ? d.precipProb : '--'}%</div>
+    `;
+    row.appendChild(card);
+  });
+}
+
+function renderSite(prefix, site) {
+  if (!site) return;
+  document.getElementById(`${prefix}-perceived`).textContent =
+    site.perceivedTemperature != null ? `${Number(site.perceivedTemperature).toFixed(1)}°` : '--';
+  document.getElementById(`${prefix}-temp`).textContent =
+    site.temperature != null ? `${Number(site.temperature).toFixed(1)}°` : '--';
+  document.getElementById(`${prefix}-hum`).textContent =
+    site.humidity != null ? `${Number(site.humidity).toFixed(0)}%` : '--';
+  document.getElementById(`${prefix}-time`).textContent =
+    site.occurredAt ? formatKST(new Date(site.occurredAt.replace(' ', 'T') + '+09:00')) : '--';
+}
+
+async function load() {
+  try {
+    const res = await fetch(`./data.json?_=${Date.now()}`, { cache: 'no-store' });
+    const data = await res.json();
+
+    if (data.weather) {
+      document.getElementById('locName').textContent = data.weather.location || '';
+      renderHourly(data.weather.hourly || []);
+      renderDaily(data.weather.daily || []);
+    }
+    renderSite('s5', data.site5);
+    renderSite('s6', data.site6);
+
+    const now = new Date();
+    document.getElementById('status').textContent =
+      `마지막 확인(내 화면): ${formatKST(now)} · 서버 데이터 수집: ${formatKST(new Date(data.updatedAt))}`;
+  } catch (e) {
+    document.getElementById('status').textContent = '데이터 로드 실패: ' + e.message;
+  }
+}
+
+load();
+setInterval(load, 60000);
+</script>
+</body>
+</html>
