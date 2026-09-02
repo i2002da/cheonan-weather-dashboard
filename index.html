@@ -98,7 +98,7 @@
     padding: 1vh 0;
   }
   .day-card .d-date { font-size: clamp(1.8rem, 4.6vh, 3rem); color: #f1f5f9; font-weight: 800; }
-  .day-card .d-weekday { color: #94a3b8; }
+  .day-card .d-weekday { color: #94a3b8; font-size: 0.8em; }
   .day-card .d-periods { display: flex; gap: 0.8vw; align-items: center; justify-content: center; }
   .day-card .d-period { display: flex; flex-direction: column; align-items: center; }
   .day-card .d-period-label { font-size: 1.1rem; color: #64748b; font-weight: 600; }
@@ -288,7 +288,7 @@ function renderDaily(daily) {
     const card = document.createElement('div');
     card.className = 'day-card';
     card.innerHTML = `
-      <div class="d-date">${mm}/${dd} (<span class="d-weekday">${wd}</span>)</div>
+      <div class="d-date">${mm}/${dd} <span class="d-weekday">(${wd})</span></div>
       <div class="d-periods">
         <div class="d-period">
           <div class="d-period-label">오전</div>
