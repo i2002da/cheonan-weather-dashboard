@@ -97,9 +97,14 @@
     justify-content: space-evenly;
     padding: 1vh 0;
   }
-  .day-card .d-date { font-size: clamp(1.8rem, 4.6vh, 3rem); color: #f1f5f9; font-weight: 800; }
-  .day-card .d-icon { font-size: clamp(2.6rem, 8vh, 5.5rem); }
-  .day-card .d-cond { font-size: 1.4rem; color: #cbd5e1; }
+  .day-card .d-date { font-size: clamp(1.8rem, 4.6vh, 3rem); color: #38bdf8; font-weight: 800; }
+  .day-card .d-weekday { color: #38bdf8; }
+  .day-card .d-periods { display: flex; gap: 0.8vw; align-items: center; justify-content: center; }
+  .day-card .d-period { display: flex; flex-direction: column; align-items: center; }
+  .day-card .d-period-label { font-size: 1.1rem; color: #64748b; font-weight: 600; }
+  .day-card .d-period-icon { font-size: clamp(2rem, 6.2vh, 4.2rem); }
+  .day-card .d-period-cond { font-size: 1.2rem; color: #cbd5e1; }
+  .day-card .d-period-cond.empty { color: #475569; }
   .day-card .d-temps { font-size: clamp(1.6rem, 4.5vh, 2.8rem); font-weight: 700; }
   .day-card .d-temps .tmax { color: #fb923c; }
   .day-card .d-temps .tmin { color: #60a5fa; margin-left: 0.4em; }
@@ -223,7 +228,7 @@
   <footer id="status">로딩 중...</footer>
 
 <script>
-const WEEKDAYS = ['일','월','화','수','목','금','토'];
+const WEEKDAYS = ['日','月','火','水','木','金','土'];
 
 function condIcon(cond) {
   switch (cond) {
@@ -278,12 +283,24 @@ function renderDaily(daily) {
     const mm = String(dateObj.getMonth() + 1).padStart(2, '0');
     const dd = String(dateObj.getDate()).padStart(2, '0');
     const wd = WEEKDAYS[dateObj.getDay()];
+    const am = d.amCondition;
+    const pm = d.pmCondition;
     const card = document.createElement('div');
     card.className = 'day-card';
     card.innerHTML = `
-      <div class="d-date">${mm}/${dd} (${wd})</div>
-      <div class="d-icon">${condIcon(d.condition)}</div>
-      <div class="d-cond">${d.condition}</div>
+      <div class="d-date">${mm}/${dd} (<span class="d-weekday">${wd}</span>)</div>
+      <div class="d-periods">
+        <div class="d-period">
+          <div class="d-period-label">오전</div>
+          <div class="d-period-icon">${am ? condIcon(am) : '–'}</div>
+          <div class="d-period-cond${am ? '' : ' empty'}">${am || '-'}</div>
+        </div>
+        <div class="d-period">
+          <div class="d-period-label">오후</div>
+          <div class="d-period-icon">${pm ? condIcon(pm) : '–'}</div>
+          <div class="d-period-cond${pm ? '' : ' empty'}">${pm || '-'}</div>
+        </div>
+      </div>
       <div class="d-temps"><span class="tmax">${d.tempMax != null ? d.tempMax.toFixed(0) : '--'}°</span><span class="tmin">${d.tempMin != null ? d.tempMin.toFixed(0) : '--'}°</span></div>
       <div class="d-pop-label">강수확률</div>
       <div class="d-pop">${d.precipProb != null ? d.precipProb : '--'}%</div>
