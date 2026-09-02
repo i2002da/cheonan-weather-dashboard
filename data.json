@@ -17,21 +17,12 @@
     "location": "충남 천안시 서북구 성성동 (천안농협하나로 성성점 인근)",
     "baseDate": "20260903",
     "baseTime": "0500",
-    "generatedAt": "2026-09-03T07:45:17+09:00",
+    "generatedAt": "2026-09-03T08:00:30+09:00",
     "hourly": [
       {
         "date": "20260903",
-        "time": "0800",
-        "temperature": 23.0,
-        "condition": "구름많음",
-        "sky": "3",
-        "pty": "0",
-        "precipProb": 20
-      },
-      {
-        "date": "20260903",
-        "time": "1000",
-        "temperature": 26.0,
+        "time": "0900",
+        "temperature": 24.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -39,35 +30,44 @@
       },
       {
         "date": "20260903",
-        "time": "1200",
-        "temperature": 28.0,
-        "condition": "맑음",
-        "sky": "1",
-        "pty": "0",
-        "precipProb": 0
-      },
-      {
-        "date": "20260903",
-        "time": "1400",
-        "temperature": 30.0,
-        "condition": "맑음",
-        "sky": "1",
-        "pty": "0",
-        "precipProb": 0
-      },
-      {
-        "date": "20260903",
-        "time": "1600",
-        "temperature": 30.0,
-        "condition": "맑음",
-        "sky": "1",
-        "pty": "0",
-        "precipProb": 0
-      },
-      {
-        "date": "20260903",
-        "time": "1800",
+        "time": "1100",
         "temperature": 27.0,
+        "condition": "맑음",
+        "sky": "1",
+        "pty": "0",
+        "precipProb": 0
+      },
+      {
+        "date": "20260903",
+        "time": "1300",
+        "temperature": 29.0,
+        "condition": "맑음",
+        "sky": "1",
+        "pty": "0",
+        "precipProb": 0
+      },
+      {
+        "date": "20260903",
+        "time": "1500",
+        "temperature": 30.0,
+        "condition": "맑음",
+        "sky": "1",
+        "pty": "0",
+        "precipProb": 0
+      },
+      {
+        "date": "20260903",
+        "time": "1700",
+        "temperature": 29.0,
+        "condition": "맑음",
+        "sky": "1",
+        "pty": "0",
+        "precipProb": 0
+      },
+      {
+        "date": "20260903",
+        "time": "1900",
+        "temperature": 26.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -109,5 +109,5 @@
       }
     ]
   },
-  "updatedAt": "2026-09-02T22:56:53Z"
+  "updatedAt": "2026-09-02T23:00:40Z"
 }
