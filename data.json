@@ -3,15 +3,15 @@
     "name": "천안아이파크 5단지",
     "perceivedTemperature": 21.4,
     "temperature": 21.0,
-    "humidity": 59.1,
-    "occurredAt": "2026-09-10 13:35:03"
+    "humidity": 59.6,
+    "occurredAt": "2026-09-10 13:40:03"
   },
   "site6": {
     "name": "천안아이파크 6단지",
     "perceivedTemperature": 21.6,
     "temperature": 21.0,
-    "humidity": 61.4,
-    "occurredAt": "2026-09-10 13:35:14"
+    "humidity": 61.6,
+    "occurredAt": "2026-09-10 13:40:14"
   },
   "weather": {
     "location": "충남 천안시 서북구 성성동 (천안농협하나로 성성점 인근)",
@@ -109,5 +109,5 @@
       }
     ]
   },
-  "updatedAt": "2026-09-10T04:35:25Z"
+  "updatedAt": "2026-09-10T04:41:58Z"
 }
