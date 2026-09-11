@@ -1,27 +1,27 @@
 {
   "site5": {
     "name": "천안아이파크 5단지",
-    "perceivedTemperature": 20.0,
-    "temperature": 17.5,
-    "humidity": 90.6,
-    "occurredAt": "2026-09-12 00:59:58"
+    "perceivedTemperature": 20.1,
+    "temperature": 17.7,
+    "humidity": 90.0,
+    "occurredAt": "2026-09-12 01:04:58"
   },
   "site6": {
     "name": "천안아이파크 6단지",
-    "perceivedTemperature": 20.7,
-    "temperature": 18.7,
-    "humidity": 83.1,
-    "occurredAt": "2026-09-12 01:00:09"
+    "perceivedTemperature": 20.5,
+    "temperature": 18.5,
+    "humidity": 83.2,
+    "occurredAt": "2026-09-12 01:05:08"
   },
   "weather": {
     "location": "충남 천안시 서북구 성성동 (천안농협하나로 성성점 인근)",
     "baseDate": "20260911",
     "baseTime": "2300",
-    "generatedAt": "2026-09-12T00:55:20+09:00",
+    "generatedAt": "2026-09-12T01:05:17+09:00",
     "hourly": [
       {
         "date": "20260912",
-        "time": "0100",
+        "time": "0200",
         "temperature": 16.0,
         "condition": "구름많음",
         "sky": "3",
@@ -30,7 +30,7 @@
       },
       {
         "date": "20260912",
-        "time": "0300",
+        "time": "0400",
         "temperature": 16.0,
         "condition": "구름많음",
         "sky": "3",
@@ -39,8 +39,8 @@
       },
       {
         "date": "20260912",
-        "time": "0500",
-        "temperature": 16.0,
+        "time": "0600",
+        "temperature": 15.0,
         "condition": "구름많음",
         "sky": "3",
         "pty": "0",
@@ -48,8 +48,8 @@
       },
       {
         "date": "20260912",
-        "time": "0700",
-        "temperature": 16.0,
+        "time": "0800",
+        "temperature": 18.0,
         "condition": "구름많음",
         "sky": "3",
         "pty": "0",
@@ -57,8 +57,8 @@
       },
       {
         "date": "20260912",
-        "time": "0900",
-        "temperature": 20.0,
+        "time": "1000",
+        "temperature": 22.0,
         "condition": "구름많음",
         "sky": "3",
         "pty": "0",
@@ -66,8 +66,8 @@
       },
       {
         "date": "20260912",
-        "time": "1100",
-        "temperature": 24.0,
+        "time": "1200",
+        "temperature": 25.0,
         "condition": "구름많음",
         "sky": "3",
         "pty": "0",
@@ -109,5 +109,5 @@
       }
     ]
   },
-  "updatedAt": "2026-09-11T16:02:17Z"
+  "updatedAt": "2026-09-11T16:05:25Z"
 }
