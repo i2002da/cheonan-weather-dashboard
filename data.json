@@ -3,21 +3,21 @@
     "name": "천안아이파크 5단지",
     "perceivedTemperature": 14.5,
     "temperature": 12.0,
-    "humidity": 93.2,
-    "occurredAt": "2026-09-16 05:09:39"
+    "humidity": 93.6,
+    "occurredAt": "2026-09-16 05:14:39"
   },
   "site6": {
     "name": "천안아이파크 6단지",
-    "perceivedTemperature": 15.2,
-    "temperature": 13.0,
-    "humidity": 87.6,
-    "occurredAt": "2026-09-16 05:09:50"
+    "perceivedTemperature": 15.1,
+    "temperature": 12.9,
+    "humidity": 87.4,
+    "occurredAt": "2026-09-16 05:14:49"
   },
   "weather": {
     "location": "충남 천안시 서북구 성성동 (천안농협하나로 성성점 인근)",
     "baseDate": "20260916",
-    "baseTime": "0200",
-    "generatedAt": "2026-09-16T05:05:17+09:00",
+    "baseTime": "0500",
+    "generatedAt": "2026-09-16T05:15:19+09:00",
     "hourly": [
       {
         "date": "20260916",
@@ -31,7 +31,7 @@
       {
         "date": "20260916",
         "time": "0800",
-        "temperature": 16.0,
+        "temperature": 17.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -40,7 +40,7 @@
       {
         "date": "20260916",
         "time": "1000",
-        "temperature": 22.0,
+        "temperature": 23.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -58,7 +58,7 @@
       {
         "date": "20260916",
         "time": "1400",
-        "temperature": 28.0,
+        "temperature": 27.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -67,7 +67,7 @@
       {
         "date": "20260916",
         "time": "1600",
-        "temperature": 28.0,
+        "temperature": 27.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -85,8 +85,8 @@
       },
       {
         "date": "20260917",
-        "tempMax": 28.0,
-        "tempMin": 16.0,
+        "tempMax": 27.0,
+        "tempMin": 17.0,
         "precipProb": 30,
         "amCondition": "흐림",
         "pmCondition": "구름많음"
@@ -94,7 +94,7 @@
       {
         "date": "20260918",
         "tempMax": 28.0,
-        "tempMin": 17.0,
+        "tempMin": 18.0,
         "precipProb": 30,
         "amCondition": "흐림",
         "pmCondition": "맑음"
@@ -109,5 +109,5 @@
       }
     ]
   },
-  "updatedAt": "2026-09-15T20:12:01Z"
+  "updatedAt": "2026-09-15T20:15:28Z"
 }
