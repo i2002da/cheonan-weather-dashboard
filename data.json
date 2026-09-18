@@ -3,25 +3,25 @@
     "name": "천안아이파크 5단지",
     "perceivedTemperature": 20.4,
     "temperature": 19.0,
-    "humidity": 74.2,
-    "occurredAt": "2026-09-19 01:54:25"
+    "humidity": 73.9,
+    "occurredAt": "2026-09-19 01:59:25"
   },
   "site6": {
     "name": "천안아이파크 6단지",
-    "perceivedTemperature": 21.1,
-    "temperature": 19.8,
-    "humidity": 71.7,
-    "occurredAt": "2026-09-19 01:54:35"
+    "perceivedTemperature": 20.9,
+    "temperature": 19.6,
+    "humidity": 71.5,
+    "occurredAt": "2026-09-19 01:59:35"
   },
   "weather": {
     "location": "충남 천안시 서북구 성성동 (천안농협하나로 성성점 인근)",
     "baseDate": "20260918",
     "baseTime": "2300",
-    "generatedAt": "2026-09-19T01:50:22+09:00",
+    "generatedAt": "2026-09-19T02:00:40+09:00",
     "hourly": [
       {
         "date": "20260919",
-        "time": "0200",
+        "time": "0300",
         "temperature": 18.0,
         "condition": "맑음",
         "sky": "1",
@@ -30,7 +30,7 @@
       },
       {
         "date": "20260919",
-        "time": "0400",
+        "time": "0500",
         "temperature": 17.0,
         "condition": "맑음",
         "sky": "1",
@@ -39,8 +39,8 @@
       },
       {
         "date": "20260919",
-        "time": "0600",
-        "temperature": 17.0,
+        "time": "0700",
+        "temperature": 18.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -48,8 +48,8 @@
       },
       {
         "date": "20260919",
-        "time": "0800",
-        "temperature": 20.0,
+        "time": "0900",
+        "temperature": 22.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -57,8 +57,8 @@
       },
       {
         "date": "20260919",
-        "time": "1000",
-        "temperature": 24.0,
+        "time": "1100",
+        "temperature": 25.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -66,8 +66,8 @@
       },
       {
         "date": "20260919",
-        "time": "1200",
-        "temperature": 26.0,
+        "time": "1300",
+        "temperature": 28.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -109,5 +109,5 @@
       }
     ]
   },
-  "updatedAt": "2026-09-18T16:56:57Z"
+  "updatedAt": "2026-09-18T17:00:48Z"
 }
