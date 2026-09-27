@@ -8,20 +8,20 @@
   },
   "site6": {
     "name": "천안아이파크 6단지",
-    "perceivedTemperature": 21.4,
-    "temperature": 19.1,
-    "humidity": 87.4,
-    "occurredAt": "2026-09-28 03:52:15"
+    "perceivedTemperature": 21.6,
+    "temperature": 19.3,
+    "humidity": 87.5,
+    "occurredAt": "2026-09-28 03:57:15"
   },
   "weather": {
     "location": "충남 천안시 서북구 성성동 (천안농협하나로 성성점 인근)",
     "baseDate": "20260928",
     "baseTime": "0200",
-    "generatedAt": "2026-09-28T03:55:17+09:00",
+    "generatedAt": "2026-09-28T04:00:33+09:00",
     "hourly": [
       {
         "date": "20260928",
-        "time": "0400",
+        "time": "0500",
         "temperature": 17.0,
         "condition": "흐림",
         "sky": "4",
@@ -30,7 +30,7 @@
       },
       {
         "date": "20260928",
-        "time": "0600",
+        "time": "0700",
         "temperature": 17.0,
         "condition": "흐림",
         "sky": "4",
@@ -39,17 +39,17 @@
       },
       {
         "date": "20260928",
-        "time": "0800",
-        "temperature": 19.0,
-        "condition": "흐림",
-        "sky": "4",
+        "time": "0900",
+        "temperature": 20.0,
+        "condition": "구름많음",
+        "sky": "3",
         "pty": "0",
-        "precipProb": 30
+        "precipProb": 20
       },
       {
         "date": "20260928",
-        "time": "1000",
-        "temperature": 22.0,
+        "time": "1100",
+        "temperature": 23.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -57,8 +57,8 @@
       },
       {
         "date": "20260928",
-        "time": "1200",
-        "temperature": 24.0,
+        "time": "1300",
+        "temperature": 25.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -66,7 +66,7 @@
       },
       {
         "date": "20260928",
-        "time": "1400",
+        "time": "1500",
         "temperature": 26.0,
         "condition": "맑음",
         "sky": "1",
@@ -109,5 +109,5 @@
       }
     ]
   },
-  "updatedAt": "2026-09-27T18:55:27Z"
+  "updatedAt": "2026-09-27T19:00:41Z"
 }
