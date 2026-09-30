@@ -2,26 +2,26 @@
   "site5": {
     "name": "천안아이파크 5단지",
     "perceivedTemperature": 30.3,
-    "temperature": 31.1,
-    "humidity": 47.8,
-    "occurredAt": "2026-09-30 11:53:36"
+    "temperature": 30.9,
+    "humidity": 48.8,
+    "occurredAt": "2026-09-30 11:58:36"
   },
   "site6": {
     "name": "천안아이파크 6단지",
-    "perceivedTemperature": 27.1,
-    "temperature": 26.5,
-    "humidity": 62.9,
-    "occurredAt": "2026-09-30 11:52:04"
+    "perceivedTemperature": 27.5,
+    "temperature": 27.0,
+    "humidity": 61.1,
+    "occurredAt": "2026-09-30 11:57:05"
   },
   "weather": {
     "location": "충남 천안시 서북구 성성동 (천안농협하나로 성성점 인근)",
     "baseDate": "20260930",
     "baseTime": "1100",
-    "generatedAt": "2026-09-30T11:55:17+09:00",
+    "generatedAt": "2026-09-30T12:00:35+09:00",
     "hourly": [
       {
         "date": "20260930",
-        "time": "1200",
+        "time": "1300",
         "temperature": 26.0,
         "condition": "맑음",
         "sky": "1",
@@ -30,7 +30,7 @@
       },
       {
         "date": "20260930",
-        "time": "1400",
+        "time": "1500",
         "temperature": 26.0,
         "condition": "맑음",
         "sky": "1",
@@ -39,8 +39,8 @@
       },
       {
         "date": "20260930",
-        "time": "1600",
-        "temperature": 26.0,
+        "time": "1700",
+        "temperature": 25.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -48,16 +48,16 @@
       },
       {
         "date": "20260930",
-        "time": "1800",
-        "temperature": 23.0,
-        "condition": "맑음",
-        "sky": "1",
+        "time": "1900",
+        "temperature": 21.0,
+        "condition": "구름많음",
+        "sky": "3",
         "pty": "0",
-        "precipProb": 0
+        "precipProb": 20
       },
       {
         "date": "20260930",
-        "time": "2000",
+        "time": "2100",
         "temperature": 20.0,
         "condition": "흐림",
         "sky": "4",
@@ -66,7 +66,7 @@
       },
       {
         "date": "20260930",
-        "time": "2200",
+        "time": "2300",
         "temperature": 19.0,
         "condition": "비",
         "sky": "4",
@@ -109,5 +109,5 @@
       }
     ]
   },
-  "updatedAt": "2026-09-30T02:55:24Z"
+  "updatedAt": "2026-09-30T03:00:41Z"
 }
