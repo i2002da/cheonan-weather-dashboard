@@ -1,23 +1,23 @@
 {
   "site5": {
     "name": "천안아이파크 5단지",
-    "perceivedTemperature": 19.5,
-    "temperature": 21.0,
-    "humidity": 34.5,
-    "occurredAt": "2026-10-02 17:08:25"
+    "perceivedTemperature": 19.4,
+    "temperature": 20.9,
+    "humidity": 34.7,
+    "occurredAt": "2026-10-02 17:13:25"
   },
   "site6": {
     "name": "천안아이파크 6단지",
     "perceivedTemperature": 20.4,
     "temperature": 21.3,
-    "humidity": 41.7,
-    "occurredAt": "2026-10-02 17:06:53"
+    "humidity": 42.1,
+    "occurredAt": "2026-10-02 17:11:53"
   },
   "weather": {
     "location": "충남 천안시 서북구 성성동 (천안농협하나로 성성점 인근)",
     "baseDate": "20261002",
-    "baseTime": "1400",
-    "generatedAt": "2026-10-02T17:10:19+09:00",
+    "baseTime": "1700",
+    "generatedAt": "2026-10-02T17:15:20+09:00",
     "hourly": [
       {
         "date": "20261002",
@@ -31,7 +31,7 @@
       {
         "date": "20261002",
         "time": "2000",
-        "temperature": 15.0,
+        "temperature": 14.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -40,7 +40,7 @@
       {
         "date": "20261002",
         "time": "2200",
-        "temperature": 13.0,
+        "temperature": 12.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -77,7 +77,7 @@
     "daily": [
       {
         "date": "20261002",
-        "tempMax": 22.0,
+        "tempMax": 18.0,
         "tempMin": 12.0,
         "precipProb": 0,
         "amCondition": null,
@@ -86,7 +86,7 @@
       {
         "date": "20261003",
         "tempMax": 23.0,
-        "tempMin": 8.0,
+        "tempMin": 7.0,
         "precipProb": 30,
         "amCondition": "맑음",
         "pmCondition": "흐림"
@@ -94,7 +94,7 @@
       {
         "date": "20261004",
         "tempMax": 25.0,
-        "tempMin": 13.0,
+        "tempMin": 12.0,
         "precipProb": 30,
         "amCondition": "맑음",
         "pmCondition": "맑음"
@@ -102,12 +102,12 @@
       {
         "date": "20261005",
         "tempMax": 21.0,
-        "tempMin": 14.0,
+        "tempMin": 13.0,
         "precipProb": 60,
         "amCondition": "비",
         "pmCondition": "흐림"
       }
     ]
   },
-  "updatedAt": "2026-10-02T08:10:28Z"
+  "updatedAt": "2026-10-02T08:15:27Z"
 }
