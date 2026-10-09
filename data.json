@@ -1,10 +1,10 @@
 {
   "site5": {
     "name": "천안아이파크 5단지",
-    "perceivedTemperature": 13.4,
-    "temperature": 10.9,
-    "humidity": 94.4,
-    "occurredAt": "2026-10-10 05:12:51"
+    "perceivedTemperature": 13.6,
+    "temperature": 11.1,
+    "humidity": 94.6,
+    "occurredAt": "2026-10-10 05:17:51"
   },
   "site6": {
     "name": "천안아이파크 6단지",
@@ -16,13 +16,13 @@
   "weather": {
     "location": "충남 천안시 서북구 성성동 (천안농협하나로 성성점 인근)",
     "baseDate": "20261010",
-    "baseTime": "0200",
-    "generatedAt": "2026-10-10T05:10:20+09:00",
+    "baseTime": "0500",
+    "generatedAt": "2026-10-10T05:20:19+09:00",
     "hourly": [
       {
         "date": "20261010",
         "time": "0600",
-        "temperature": 10.0,
+        "temperature": 11.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -67,7 +67,7 @@
       {
         "date": "20261010",
         "time": "1600",
-        "temperature": 26.0,
+        "temperature": 25.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -78,22 +78,22 @@
       {
         "date": "20261010",
         "tempMax": 26.0,
-        "tempMin": 10.0,
+        "tempMin": 11.0,
         "precipProb": 30,
         "amCondition": "맑음",
         "pmCondition": "맑음"
       },
       {
         "date": "20261011",
-        "tempMax": 26.0,
-        "tempMin": 14.0,
+        "tempMax": 27.0,
+        "tempMin": 13.0,
         "precipProb": 30,
-        "amCondition": "구름많음",
-        "pmCondition": "구름많음"
+        "amCondition": "흐림",
+        "pmCondition": "맑음"
       },
       {
         "date": "20261012",
-        "tempMax": 26.0,
+        "tempMax": 27.0,
         "tempMin": 16.0,
         "precipProb": 60,
         "amCondition": "맑음",
@@ -101,13 +101,13 @@
       },
       {
         "date": "20261013",
-        "tempMax": 24.0,
-        "tempMin": 16.0,
-        "precipProb": 60,
+        "tempMax": 23.0,
+        "tempMin": 17.0,
+        "precipProb": 100,
         "amCondition": "비",
-        "pmCondition": "맑음"
+        "pmCondition": "비"
       }
     ]
   },
-  "updatedAt": "2026-10-09T20:16:58Z"
+  "updatedAt": "2026-10-09T20:20:28Z"
 }
