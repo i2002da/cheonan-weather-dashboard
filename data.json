@@ -1,10 +1,10 @@
 {
   "site5": {
     "name": "천안아이파크 5단지",
-    "perceivedTemperature": 17.1,
-    "temperature": 14.7,
-    "humidity": 90.8,
-    "occurredAt": "2026-10-11 05:07:45"
+    "perceivedTemperature": 17.3,
+    "temperature": 14.9,
+    "humidity": 89.9,
+    "occurredAt": "2026-10-11 05:12:47"
   },
   "site6": {
     "name": "천안아이파크 6단지",
@@ -16,13 +16,13 @@
   "weather": {
     "location": "충남 천안시 서북구 성성동 (천안농협하나로 성성점 인근)",
     "baseDate": "20261011",
-    "baseTime": "0200",
-    "generatedAt": "2026-10-11T05:10:03+09:00",
+    "baseTime": "0500",
+    "generatedAt": "2026-10-11T05:15:23+09:00",
     "hourly": [
       {
         "date": "20261011",
         "time": "0600",
-        "temperature": 13.0,
+        "temperature": 14.0,
         "condition": "흐림",
         "sky": "4",
         "pty": "0",
@@ -31,7 +31,7 @@
       {
         "date": "20261011",
         "time": "0800",
-        "temperature": 16.0,
+        "temperature": 17.0,
         "condition": "구름많음",
         "sky": "3",
         "pty": "0",
@@ -40,7 +40,7 @@
       {
         "date": "20261011",
         "time": "1000",
-        "temperature": 22.0,
+        "temperature": 23.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -78,7 +78,7 @@
       {
         "date": "20261011",
         "tempMax": 27.0,
-        "tempMin": 13.0,
+        "tempMin": 14.0,
         "precipProb": 30,
         "amCondition": "맑음",
         "pmCondition": "맑음"
@@ -93,8 +93,8 @@
       },
       {
         "date": "20261013",
-        "tempMax": 23.0,
-        "tempMin": 16.0,
+        "tempMax": 22.0,
+        "tempMin": 17.0,
         "precipProb": 70,
         "amCondition": "비",
         "pmCondition": "맑음"
@@ -102,12 +102,12 @@
       {
         "date": "20261014",
         "tempMax": 19.0,
-        "tempMin": 9.0,
+        "tempMin": 8.0,
         "precipProb": 0,
         "amCondition": "맑음",
         "pmCondition": "맑음"
       }
     ]
   },
-  "updatedAt": "2026-10-10T20:11:58Z"
+  "updatedAt": "2026-10-10T20:15:29Z"
 }
