@@ -1,10 +1,10 @@
 {
   "site5": {
     "name": "천안아이파크 5단지",
-    "perceivedTemperature": 27.8,
-    "temperature": 27.9,
-    "humidity": 54.6,
-    "occurredAt": "2026-10-11 16:57:44"
+    "perceivedTemperature": 27.6,
+    "temperature": 27.7,
+    "humidity": 54.2,
+    "occurredAt": "2026-10-11 17:02:44"
   },
   "site6": {
     "name": "천안아이파크 6단지",
@@ -17,12 +17,12 @@
     "location": "충남 천안시 서북구 성성동 (천안농협하나로 성성점 인근)",
     "baseDate": "20261011",
     "baseTime": "1400",
-    "generatedAt": "2026-10-11T16:55:14+09:00",
+    "generatedAt": "2026-10-11T17:05:15+09:00",
     "hourly": [
       {
         "date": "20261011",
-        "time": "1700",
-        "temperature": 26.0,
+        "time": "1800",
+        "temperature": 23.0,
         "condition": "구름많음",
         "sky": "3",
         "pty": "0",
@@ -30,8 +30,8 @@
       },
       {
         "date": "20261011",
-        "time": "1900",
-        "temperature": 21.0,
+        "time": "2000",
+        "temperature": 20.0,
         "condition": "흐림",
         "sky": "4",
         "pty": "0",
@@ -39,16 +39,7 @@
       },
       {
         "date": "20261011",
-        "time": "2100",
-        "temperature": 19.0,
-        "condition": "맑음",
-        "sky": "1",
-        "pty": "0",
-        "precipProb": 0
-      },
-      {
-        "date": "20261011",
-        "time": "2300",
+        "time": "2200",
         "temperature": 19.0,
         "condition": "맑음",
         "sky": "1",
@@ -57,7 +48,7 @@
       },
       {
         "date": "20261012",
-        "time": "0100",
+        "time": "0000",
         "temperature": 18.0,
         "condition": "맑음",
         "sky": "1",
@@ -66,8 +57,17 @@
       },
       {
         "date": "20261012",
-        "time": "0300",
+        "time": "0200",
         "temperature": 18.0,
+        "condition": "맑음",
+        "sky": "1",
+        "pty": "0",
+        "precipProb": 0
+      },
+      {
+        "date": "20261012",
+        "time": "0400",
+        "temperature": 17.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -109,5 +109,5 @@
       }
     ]
   },
-  "updatedAt": "2026-10-11T08:02:12Z"
+  "updatedAt": "2026-10-11T08:05:23Z"
 }
