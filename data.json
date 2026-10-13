@@ -3,34 +3,25 @@
     "name": "천안아이파크 5단지",
     "perceivedTemperature": 15.2,
     "temperature": 14.4,
-    "humidity": 64.4,
-    "occurredAt": "2026-10-14 02:07:32"
+    "humidity": 63.8,
+    "occurredAt": "2026-10-14 02:12:32"
   },
   "site6": {
     "name": "천안아이파크 6단지",
-    "perceivedTemperature": 15.5,
-    "temperature": 14.6,
-    "humidity": 65.7,
-    "occurredAt": "2026-10-14 02:01:00"
+    "perceivedTemperature": 15.4,
+    "temperature": 14.4,
+    "humidity": 66.4,
+    "occurredAt": "2026-10-14 02:10:59"
   },
   "weather": {
     "location": "충남 천안시 서북구 성성동 (천안농협하나로 성성점 인근)",
-    "baseDate": "20261013",
-    "baseTime": "2000",
-    "generatedAt": "2026-10-13T23:10:19+09:00",
+    "baseDate": "20261014",
+    "baseTime": "0200",
+    "generatedAt": "2026-10-14T02:15:21+09:00",
     "hourly": [
       {
         "date": "20261014",
-        "time": "0000",
-        "temperature": 15.0,
-        "condition": "맑음",
-        "sky": "1",
-        "pty": "0",
-        "precipProb": 0
-      },
-      {
-        "date": "20261014",
-        "time": "0200",
+        "time": "0300",
         "temperature": 13.0,
         "condition": "맑음",
         "sky": "1",
@@ -39,25 +30,7 @@
       },
       {
         "date": "20261014",
-        "time": "0400",
-        "temperature": 11.0,
-        "condition": "맑음",
-        "sky": "1",
-        "pty": "0",
-        "precipProb": 0
-      },
-      {
-        "date": "20261014",
-        "time": "0600",
-        "temperature": 8.0,
-        "condition": "맑음",
-        "sky": "1",
-        "pty": "0",
-        "precipProb": 0
-      },
-      {
-        "date": "20261014",
-        "time": "0800",
+        "time": "0500",
         "temperature": 10.0,
         "condition": "맑음",
         "sky": "1",
@@ -66,8 +39,35 @@
       },
       {
         "date": "20261014",
-        "time": "1000",
-        "temperature": 16.0,
+        "time": "0700",
+        "temperature": 8.0,
+        "condition": "맑음",
+        "sky": "1",
+        "pty": "0",
+        "precipProb": 0
+      },
+      {
+        "date": "20261014",
+        "time": "0900",
+        "temperature": 14.0,
+        "condition": "맑음",
+        "sky": "1",
+        "pty": "0",
+        "precipProb": 0
+      },
+      {
+        "date": "20261014",
+        "time": "1100",
+        "temperature": 17.0,
+        "condition": "맑음",
+        "sky": "1",
+        "pty": "0",
+        "precipProb": 0
+      },
+      {
+        "date": "20261014",
+        "time": "1300",
+        "temperature": 19.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -75,14 +75,6 @@
       }
     ],
     "daily": [
-      {
-        "date": "20261013",
-        "tempMax": 16.0,
-        "tempMin": 15.0,
-        "precipProb": 20,
-        "amCondition": null,
-        "pmCondition": "구름많음"
-      },
       {
         "date": "20261014",
         "tempMax": 20.0,
@@ -106,8 +98,16 @@
         "precipProb": 30,
         "amCondition": "맑음",
         "pmCondition": "구름많음"
+      },
+      {
+        "date": "20261017",
+        "tempMax": 25.0,
+        "tempMin": 12.0,
+        "precipProb": 30,
+        "amCondition": "맑음",
+        "pmCondition": "흐림"
       }
     ]
   },
-  "updatedAt": "2026-10-13T17:10:48Z"
+  "updatedAt": "2026-10-13T17:15:30Z"
 }
