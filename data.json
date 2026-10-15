@@ -1,23 +1,23 @@
 {
   "site5": {
     "name": "천안아이파크 5단지",
-    "perceivedTemperature": 20.3,
-    "temperature": 20.3,
-    "humidity": 53.9,
-    "occurredAt": "2026-10-15 17:07:56"
+    "perceivedTemperature": 20.2,
+    "temperature": 20.1,
+    "humidity": 54.4,
+    "occurredAt": "2026-10-15 17:12:56"
   },
   "site6": {
     "name": "천안아이파크 6단지",
-    "perceivedTemperature": 20.3,
-    "temperature": 19.9,
+    "perceivedTemperature": 20.1,
+    "temperature": 19.7,
     "humidity": 58.9,
-    "occurredAt": "2026-10-15 17:10:10"
+    "occurredAt": "2026-10-15 17:15:10"
   },
   "weather": {
     "location": "충남 천안시 서북구 성성동 (천안농협하나로 성성점 인근)",
     "baseDate": "20261015",
-    "baseTime": "1400",
-    "generatedAt": "2026-10-15T17:10:19+09:00",
+    "baseTime": "1700",
+    "generatedAt": "2026-10-15T17:15:19+09:00",
     "hourly": [
       {
         "date": "20261015",
@@ -49,7 +49,7 @@
       {
         "date": "20261016",
         "time": "0000",
-        "temperature": 12.0,
+        "temperature": 13.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -58,7 +58,7 @@
       {
         "date": "20261016",
         "time": "0200",
-        "temperature": 12.0,
+        "temperature": 11.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -77,9 +77,9 @@
     "daily": [
       {
         "date": "20261015",
-        "tempMax": 22.0,
+        "tempMax": 18.0,
         "tempMin": 13.0,
-        "precipProb": 20,
+        "precipProb": 0,
         "amCondition": null,
         "pmCondition": "맑음"
       },
@@ -93,7 +93,7 @@
       },
       {
         "date": "20261017",
-        "tempMax": 25.0,
+        "tempMax": 26.0,
         "tempMin": 12.0,
         "precipProb": 30,
         "amCondition": "맑음",
@@ -102,12 +102,12 @@
       {
         "date": "20261018",
         "tempMax": 23.0,
-        "tempMin": 16.0,
+        "tempMin": 15.0,
         "precipProb": 90,
         "amCondition": "비",
         "pmCondition": "비"
       }
     ]
   },
-  "updatedAt": "2026-10-15T08:10:28Z"
+  "updatedAt": "2026-10-15T08:15:26Z"
 }
