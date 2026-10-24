@@ -17,61 +17,61 @@
     "location": "충남 천안시 서북구 성성동 (천안농협하나로 성성점 인근)",
     "baseDate": "20261024",
     "baseTime": "0800",
-    "generatedAt": "2026-10-24T08:58:46+09:00",
+    "generatedAt": "2026-10-24T09:00:36+09:00",
     "hourly": [
       {
         "date": "20261024",
-        "time": "0900",
+        "time": "1000",
+        "temperature": 17.0,
+        "condition": "비",
+        "sky": "4",
+        "pty": "1",
+        "precipProb": 60
+      },
+      {
+        "date": "20261024",
+        "time": "1200",
+        "temperature": 18.0,
+        "condition": "비",
+        "sky": "4",
+        "pty": "1",
+        "precipProb": 60
+      },
+      {
+        "date": "20261024",
+        "time": "1400",
+        "temperature": 18.0,
+        "condition": "비",
+        "sky": "4",
+        "pty": "1",
+        "precipProb": 60
+      },
+      {
+        "date": "20261024",
+        "time": "1600",
+        "temperature": 18.0,
+        "condition": "비",
+        "sky": "4",
+        "pty": "1",
+        "precipProb": 60
+      },
+      {
+        "date": "20261024",
+        "time": "1800",
         "temperature": 16.0,
+        "condition": "구름많음",
+        "sky": "3",
+        "pty": "0",
+        "precipProb": 20
+      },
+      {
+        "date": "20261024",
+        "time": "2000",
+        "temperature": 15.0,
         "condition": "흐림",
         "sky": "4",
         "pty": "0",
         "precipProb": 30
-      },
-      {
-        "date": "20261024",
-        "time": "1100",
-        "temperature": 17.0,
-        "condition": "비",
-        "sky": "4",
-        "pty": "1",
-        "precipProb": 60
-      },
-      {
-        "date": "20261024",
-        "time": "1300",
-        "temperature": 18.0,
-        "condition": "비",
-        "sky": "4",
-        "pty": "1",
-        "precipProb": 60
-      },
-      {
-        "date": "20261024",
-        "time": "1500",
-        "temperature": 18.0,
-        "condition": "비",
-        "sky": "4",
-        "pty": "1",
-        "precipProb": 60
-      },
-      {
-        "date": "20261024",
-        "time": "1700",
-        "temperature": 17.0,
-        "condition": "구름많음",
-        "sky": "3",
-        "pty": "0",
-        "precipProb": 20
-      },
-      {
-        "date": "20261024",
-        "time": "1900",
-        "temperature": 16.0,
-        "condition": "구름많음",
-        "sky": "3",
-        "pty": "0",
-        "precipProb": 20
       }
     ],
     "daily": [
@@ -109,5 +109,5 @@
       }
     ]
   },
-  "updatedAt": "2026-10-23T23:58:53Z"
+  "updatedAt": "2026-10-24T00:00:42Z"
 }
