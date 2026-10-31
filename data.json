@@ -3,26 +3,26 @@
     "name": "천안아이파크 5단지",
     "perceivedTemperature": 7.6,
     "temperature": 7.6,
-    "humidity": 80.8,
-    "occurredAt": "2026-11-01 05:08:51"
+    "humidity": 81.3,
+    "occurredAt": "2026-11-01 05:13:51"
   },
   "site6": {
     "name": "천안아이파크 6단지",
-    "perceivedTemperature": 8.6,
-    "temperature": 8.6,
-    "humidity": 70.8,
-    "occurredAt": "2026-11-01 05:05:31"
+    "perceivedTemperature": 8.8,
+    "temperature": 8.8,
+    "humidity": 70.9,
+    "occurredAt": "2026-11-01 05:10:31"
   },
   "weather": {
     "location": "충남 천안시 서북구 성성동 (천안농협하나로 성성점 인근)",
     "baseDate": "20261101",
-    "baseTime": "0200",
-    "generatedAt": "2026-11-01T05:10:21+09:00",
+    "baseTime": "0500",
+    "generatedAt": "2026-11-01T05:15:21+09:00",
     "hourly": [
       {
         "date": "20261101",
         "time": "0600",
-        "temperature": 6.0,
+        "temperature": 7.0,
         "condition": "흐림",
         "sky": "4",
         "pty": "0",
@@ -31,7 +31,7 @@
       {
         "date": "20261101",
         "time": "0800",
-        "temperature": 7.0,
+        "temperature": 8.0,
         "condition": "비",
         "sky": "4",
         "pty": "1",
@@ -49,7 +49,7 @@
       {
         "date": "20261101",
         "time": "1200",
-        "temperature": 10.0,
+        "temperature": 12.0,
         "condition": "흐림",
         "sky": "4",
         "pty": "0",
@@ -67,7 +67,7 @@
       {
         "date": "20261101",
         "time": "1600",
-        "temperature": 12.0,
+        "temperature": 13.0,
         "condition": "흐림",
         "sky": "4",
         "pty": "0",
@@ -78,14 +78,14 @@
       {
         "date": "20261101",
         "tempMax": 13.0,
-        "tempMin": 6.0,
+        "tempMin": 7.0,
         "precipProb": 60,
         "amCondition": "비",
         "pmCondition": "비"
       },
       {
         "date": "20261102",
-        "tempMax": 16.0,
+        "tempMax": 15.0,
         "tempMin": 8.0,
         "precipProb": 60,
         "amCondition": "비",
@@ -103,11 +103,11 @@
         "date": "20261104",
         "tempMax": 18.0,
         "tempMin": 5.0,
-        "precipProb": 30,
-        "amCondition": "흐림",
-        "pmCondition": "흐림"
+        "precipProb": 20,
+        "amCondition": "구름많음",
+        "pmCondition": "구름많음"
       }
     ]
   },
-  "updatedAt": "2026-10-31T20:10:28Z"
+  "updatedAt": "2026-10-31T20:15:27Z"
 }
