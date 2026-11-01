@@ -3,25 +3,25 @@
     "name": "천안아이파크 5단지",
     "perceivedTemperature": 8.3,
     "temperature": 8.3,
-    "humidity": 93.6,
-    "occurredAt": "2026-11-01 18:53:51"
+    "humidity": 93.5,
+    "occurredAt": "2026-11-01 18:58:51"
   },
   "site6": {
     "name": "천안아이파크 6단지",
     "perceivedTemperature": 8.2,
     "temperature": 8.2,
     "humidity": 87.5,
-    "occurredAt": "2026-11-01 18:50:28"
+    "occurredAt": "2026-11-01 19:00:28"
   },
   "weather": {
     "location": "충남 천안시 서북구 성성동 (천안농협하나로 성성점 인근)",
     "baseDate": "20261101",
     "baseTime": "1700",
-    "generatedAt": "2026-11-01T18:55:15+09:00",
+    "generatedAt": "2026-11-01T19:00:33+09:00",
     "hourly": [
       {
         "date": "20261101",
-        "time": "1900",
+        "time": "2000",
         "temperature": 10.0,
         "condition": "비",
         "sky": "4",
@@ -30,16 +30,7 @@
       },
       {
         "date": "20261101",
-        "time": "2100",
-        "temperature": 10.0,
-        "condition": "비",
-        "sky": "4",
-        "pty": "1",
-        "precipProb": 60
-      },
-      {
-        "date": "20261101",
-        "time": "2300",
+        "time": "2200",
         "temperature": 10.0,
         "condition": "비",
         "sky": "4",
@@ -48,8 +39,8 @@
       },
       {
         "date": "20261102",
-        "time": "0100",
-        "temperature": 11.0,
+        "time": "0000",
+        "temperature": 10.0,
         "condition": "비",
         "sky": "4",
         "pty": "1",
@@ -57,7 +48,7 @@
       },
       {
         "date": "20261102",
-        "time": "0300",
+        "time": "0200",
         "temperature": 10.0,
         "condition": "흐림",
         "sky": "4",
@@ -66,7 +57,16 @@
       },
       {
         "date": "20261102",
-        "time": "0500",
+        "time": "0400",
+        "temperature": 10.0,
+        "condition": "흐림",
+        "sky": "4",
+        "pty": "0",
+        "precipProb": 30
+      },
+      {
+        "date": "20261102",
+        "time": "0600",
         "temperature": 9.0,
         "condition": "흐림",
         "sky": "4",
@@ -109,5 +109,5 @@
       }
     ]
   },
-  "updatedAt": "2026-11-01T09:55:23Z"
+  "updatedAt": "2026-11-01T10:00:42Z"
 }
