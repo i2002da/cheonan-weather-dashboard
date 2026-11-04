@@ -10,18 +10,18 @@
     "name": "천안아이파크 6단지",
     "perceivedTemperature": 9.8,
     "temperature": 9.8,
-    "humidity": 87.7,
-    "occurredAt": "2026-11-05 04:55:12"
+    "humidity": 87.6,
+    "occurredAt": "2026-11-05 05:00:11"
   },
   "weather": {
     "location": "충남 천안시 서북구 성성동 (천안농협하나로 성성점 인근)",
     "baseDate": "20261105",
     "baseTime": "0200",
-    "generatedAt": "2026-11-05T04:55:16+09:00",
+    "generatedAt": "2026-11-05T05:00:36+09:00",
     "hourly": [
       {
         "date": "20261105",
-        "time": "0500",
+        "time": "0600",
         "temperature": 9.0,
         "condition": "비",
         "sky": "4",
@@ -30,25 +30,16 @@
       },
       {
         "date": "20261105",
-        "time": "0700",
-        "temperature": 9.0,
-        "condition": "비",
+        "time": "0800",
+        "temperature": 10.0,
+        "condition": "흐림",
         "sky": "4",
-        "pty": "1",
-        "precipProb": 60
+        "pty": "0",
+        "precipProb": 30
       },
       {
         "date": "20261105",
-        "time": "0900",
-        "temperature": 11.0,
-        "condition": "비",
-        "sky": "4",
-        "pty": "1",
-        "precipProb": 60
-      },
-      {
-        "date": "20261105",
-        "time": "1100",
+        "time": "1000",
         "temperature": 12.0,
         "condition": "비",
         "sky": "4",
@@ -57,8 +48,8 @@
       },
       {
         "date": "20261105",
-        "time": "1300",
-        "temperature": 13.0,
+        "time": "1200",
+        "temperature": 12.0,
         "condition": "비",
         "sky": "4",
         "pty": "1",
@@ -66,12 +57,21 @@
       },
       {
         "date": "20261105",
-        "time": "1500",
-        "temperature": 15.0,
+        "time": "1400",
+        "temperature": 14.0,
         "condition": "비",
         "sky": "4",
         "pty": "1",
         "precipProb": 60
+      },
+      {
+        "date": "20261105",
+        "time": "1600",
+        "temperature": 15.0,
+        "condition": "흐림",
+        "sky": "4",
+        "pty": "0",
+        "precipProb": 30
       }
     ],
     "daily": [
@@ -109,5 +109,5 @@
       }
     ]
   },
-  "updatedAt": "2026-11-04T19:55:24Z"
+  "updatedAt": "2026-11-04T20:00:44Z"
 }
