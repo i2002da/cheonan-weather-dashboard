@@ -8,21 +8,21 @@
   },
   "site6": {
     "name": "천안아이파크 6단지",
-    "perceivedTemperature": 2.5,
-    "temperature": 2.5,
-    "humidity": 64.4,
-    "occurredAt": "2026-11-08 07:54:57"
+    "perceivedTemperature": 2.6,
+    "temperature": 2.6,
+    "humidity": 61.5,
+    "occurredAt": "2026-11-08 07:59:57"
   },
   "weather": {
     "location": "충남 천안시 서북구 성성동 (천안농협하나로 성성점 인근)",
     "baseDate": "20261108",
     "baseTime": "0500",
-    "generatedAt": "2026-11-08T07:55:15+09:00",
+    "generatedAt": "2026-11-08T08:00:33+09:00",
     "hourly": [
       {
         "date": "20261108",
-        "time": "0800",
-        "temperature": 3.0,
+        "time": "0900",
+        "temperature": 6.0,
         "condition": "흐림",
         "sky": "4",
         "pty": "0",
@@ -30,8 +30,8 @@
       },
       {
         "date": "20261108",
-        "time": "1000",
-        "temperature": 7.0,
+        "time": "1100",
+        "temperature": 8.0,
         "condition": "흐림",
         "sky": "4",
         "pty": "0",
@@ -39,8 +39,17 @@
       },
       {
         "date": "20261108",
-        "time": "1200",
-        "temperature": 9.0,
+        "time": "1300",
+        "temperature": 10.0,
+        "condition": "흐림",
+        "sky": "4",
+        "pty": "0",
+        "precipProb": 30
+      },
+      {
+        "date": "20261108",
+        "time": "1500",
+        "temperature": 10.0,
         "condition": "구름많음",
         "sky": "3",
         "pty": "0",
@@ -48,7 +57,7 @@
       },
       {
         "date": "20261108",
-        "time": "1400",
+        "time": "1700",
         "temperature": 10.0,
         "condition": "흐림",
         "sky": "4",
@@ -57,21 +66,12 @@
       },
       {
         "date": "20261108",
-        "time": "1600",
-        "temperature": 10.0,
-        "condition": "흐림",
+        "time": "1900",
+        "temperature": 7.0,
+        "condition": "비",
         "sky": "4",
-        "pty": "0",
-        "precipProb": 30
-      },
-      {
-        "date": "20261108",
-        "time": "1800",
-        "temperature": 8.0,
-        "condition": "흐림",
-        "sky": "4",
-        "pty": "0",
-        "precipProb": 30
+        "pty": "1",
+        "precipProb": 60
       }
     ],
     "daily": [
@@ -109,5 +109,5 @@
       }
     ]
   },
-  "updatedAt": "2026-11-07T22:55:21Z"
+  "updatedAt": "2026-11-07T23:00:42Z"
 }
