@@ -10,14 +10,14 @@
     "name": "천안아이파크 6단지",
     "perceivedTemperature": 14.0,
     "temperature": 12.6,
-    "humidity": 73.3,
-    "occurredAt": "2026-11-12 17:09:33"
+    "humidity": 74.6,
+    "occurredAt": "2026-11-12 17:14:33"
   },
   "weather": {
     "location": "충남 천안시 서북구 성성동 (천안농협하나로 성성점 인근)",
     "baseDate": "20261112",
-    "baseTime": "1400",
-    "generatedAt": "2026-11-12T17:10:21+09:00",
+    "baseTime": "1700",
+    "generatedAt": "2026-11-12T17:15:20+09:00",
     "hourly": [
       {
         "date": "20261112",
@@ -40,7 +40,7 @@
       {
         "date": "20261112",
         "time": "2200",
-        "temperature": 9.0,
+        "temperature": 7.0,
         "condition": "흐림",
         "sky": "4",
         "pty": "0",
@@ -49,7 +49,7 @@
       {
         "date": "20261113",
         "time": "0000",
-        "temperature": 9.0,
+        "temperature": 6.0,
         "condition": "흐림",
         "sky": "4",
         "pty": "0",
@@ -58,7 +58,7 @@
       {
         "date": "20261113",
         "time": "0200",
-        "temperature": 8.0,
+        "temperature": 7.0,
         "condition": "흐림",
         "sky": "4",
         "pty": "0",
@@ -67,7 +67,7 @@
       {
         "date": "20261113",
         "time": "0400",
-        "temperature": 7.0,
+        "temperature": 6.0,
         "condition": "흐림",
         "sky": "4",
         "pty": "0",
@@ -77,15 +77,15 @@
     "daily": [
       {
         "date": "20261112",
-        "tempMax": 16.0,
-        "tempMin": 9.0,
+        "tempMax": 11.0,
+        "tempMin": 7.0,
         "precipProb": 30,
         "amCondition": null,
-        "pmCondition": "구름많음"
+        "pmCondition": "흐림"
       },
       {
         "date": "20261113",
-        "tempMax": 19.0,
+        "tempMax": 17.0,
         "tempMin": 5.0,
         "precipProb": 30,
         "amCondition": "흐림",
@@ -101,13 +101,13 @@
       },
       {
         "date": "20261115",
-        "tempMax": 19.0,
-        "tempMin": 10.0,
+        "tempMax": 18.0,
+        "tempMin": 8.0,
         "precipProb": 30,
-        "amCondition": "흐림",
+        "amCondition": "구름많음",
         "pmCondition": "맑음"
       }
     ]
   },
-  "updatedAt": "2026-11-12T08:10:28Z"
+  "updatedAt": "2026-11-12T08:15:27Z"
 }
