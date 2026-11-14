@@ -11,17 +11,17 @@
     "perceivedTemperature": 13.7,
     "temperature": 11.4,
     "humidity": 89.8,
-    "occurredAt": "2026-11-14 20:54:23"
+    "occurredAt": "2026-11-14 20:59:22"
   },
   "weather": {
     "location": "충남 천안시 서북구 성성동 (천안농협하나로 성성점 인근)",
     "baseDate": "20261114",
     "baseTime": "2000",
-    "generatedAt": "2026-11-14T20:55:17+09:00",
+    "generatedAt": "2026-11-14T21:00:38+09:00",
     "hourly": [
       {
         "date": "20261114",
-        "time": "2100",
+        "time": "2200",
         "temperature": 13.0,
         "condition": "비",
         "sky": "4",
@@ -29,17 +29,17 @@
         "precipProb": 60
       },
       {
-        "date": "20261114",
-        "time": "2300",
+        "date": "20261115",
+        "time": "0000",
         "temperature": 12.0,
-        "condition": "흐림",
+        "condition": "비",
         "sky": "4",
-        "pty": "0",
-        "precipProb": 30
+        "pty": "1",
+        "precipProb": 60
       },
       {
         "date": "20261115",
-        "time": "0100",
+        "time": "0200",
         "temperature": 12.0,
         "condition": "구름많음",
         "sky": "3",
@@ -48,8 +48,8 @@
       },
       {
         "date": "20261115",
-        "time": "0300",
-        "temperature": 12.0,
+        "time": "0400",
+        "temperature": 11.0,
         "condition": "구름많음",
         "sky": "3",
         "pty": "0",
@@ -57,7 +57,7 @@
       },
       {
         "date": "20261115",
-        "time": "0500",
+        "time": "0600",
         "temperature": 10.0,
         "condition": "구름많음",
         "sky": "3",
@@ -66,12 +66,12 @@
       },
       {
         "date": "20261115",
-        "time": "0700",
+        "time": "0800",
         "temperature": 10.0,
-        "condition": "흐림",
-        "sky": "4",
+        "condition": "구름많음",
+        "sky": "3",
         "pty": "0",
-        "precipProb": 30
+        "precipProb": 20
       }
     ],
     "daily": [
@@ -109,5 +109,5 @@
       }
     ]
   },
-  "updatedAt": "2026-11-14T11:55:26Z"
+  "updatedAt": "2026-11-14T12:00:45Z"
 }
