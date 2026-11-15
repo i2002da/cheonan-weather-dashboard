@@ -11,13 +11,13 @@
     "perceivedTemperature": 6.2,
     "temperature": 6.2,
     "humidity": 88.6,
-    "occurredAt": "2026-11-16 07:19:17"
+    "occurredAt": "2026-11-16 07:24:16"
   },
   "weather": {
     "location": "충남 천안시 서북구 성성동 (천안농협하나로 성성점 인근)",
     "baseDate": "20261116",
     "baseTime": "0500",
-    "generatedAt": "2026-11-16T07:20:21+09:00",
+    "generatedAt": "2026-11-16T07:25:15+09:00",
     "hourly": [
       {
         "date": "20261116",
@@ -109,5 +109,5 @@
       }
     ]
   },
-  "updatedAt": "2026-11-15T22:20:27Z"
+  "updatedAt": "2026-11-15T22:25:24Z"
 }
