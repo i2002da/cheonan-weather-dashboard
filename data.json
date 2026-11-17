@@ -8,21 +8,21 @@
   },
   "site6": {
     "name": "천안아이파크 6단지",
-    "perceivedTemperature": 7.0,
-    "temperature": 7.0,
-    "humidity": 81.0,
-    "occurredAt": "2026-11-18 05:09:08"
+    "perceivedTemperature": 6.7,
+    "temperature": 6.7,
+    "humidity": 80.6,
+    "occurredAt": "2026-11-18 05:14:08"
   },
   "weather": {
     "location": "충남 천안시 서북구 성성동 (천안농협하나로 성성점 인근)",
     "baseDate": "20261118",
-    "baseTime": "0200",
-    "generatedAt": "2026-11-18T05:10:22+09:00",
+    "baseTime": "0500",
+    "generatedAt": "2026-11-18T05:15:26+09:00",
     "hourly": [
       {
         "date": "20261118",
         "time": "0600",
-        "temperature": 6.0,
+        "temperature": 5.0,
         "condition": "흐림",
         "sky": "4",
         "pty": "0",
@@ -49,7 +49,7 @@
       {
         "date": "20261118",
         "time": "1200",
-        "temperature": 9.0,
+        "temperature": 8.0,
         "condition": "흐림",
         "sky": "4",
         "pty": "0",
@@ -68,19 +68,19 @@
         "date": "20261118",
         "time": "1600",
         "temperature": 9.0,
-        "condition": "비",
+        "condition": "흐림",
         "sky": "4",
-        "pty": "1",
-        "precipProb": 60
+        "pty": "0",
+        "precipProb": 30
       }
     ],
     "daily": [
       {
         "date": "20261118",
         "tempMax": 10.0,
-        "tempMin": 5.0,
+        "tempMin": 3.0,
         "precipProb": 60,
-        "amCondition": "흐림",
+        "amCondition": "맑음",
         "pmCondition": "비"
       },
       {
@@ -94,20 +94,20 @@
       {
         "date": "20261120",
         "tempMax": 4.0,
-        "tempMin": -3.0,
+        "tempMin": -4.0,
         "precipProb": 60,
         "amCondition": "눈",
         "pmCondition": "맑음"
       },
       {
         "date": "20261121",
-        "tempMax": 3.0,
-        "tempMin": -5.0,
+        "tempMax": 4.0,
+        "tempMin": -4.0,
         "precipProb": 10,
         "amCondition": "맑음",
         "pmCondition": "맑음"
       }
     ]
   },
-  "updatedAt": "2026-11-17T20:10:30Z"
+  "updatedAt": "2026-11-17T20:15:35Z"
 }
