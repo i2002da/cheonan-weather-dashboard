@@ -8,20 +8,20 @@
   },
   "site6": {
     "name": "천안아이파크 6단지",
-    "perceivedTemperature": 6.3,
+    "perceivedTemperature": 6.6,
     "temperature": 7.5,
-    "humidity": 74.6,
-    "occurredAt": "2026-11-18 17:54:05"
+    "humidity": 75.1,
+    "occurredAt": "2026-11-18 17:59:05"
   },
   "weather": {
     "location": "충남 천안시 서북구 성성동 (천안농협하나로 성성점 인근)",
     "baseDate": "20261118",
     "baseTime": "1700",
-    "generatedAt": "2026-11-18T17:55:23+09:00",
+    "generatedAt": "2026-11-18T18:00:45+09:00",
     "hourly": [
       {
         "date": "20261118",
-        "time": "1800",
+        "time": "1900",
         "temperature": 7.0,
         "condition": "비",
         "sky": "4",
@@ -30,25 +30,25 @@
       },
       {
         "date": "20261118",
-        "time": "2000",
-        "temperature": 6.0,
-        "condition": "비",
-        "sky": "4",
-        "pty": "1",
-        "precipProb": 60
+        "time": "2100",
+        "temperature": 4.0,
+        "condition": "맑음",
+        "sky": "1",
+        "pty": "0",
+        "precipProb": 0
       },
       {
         "date": "20261118",
-        "time": "2200",
+        "time": "2300",
         "temperature": 3.0,
-        "condition": "구름많음",
-        "sky": "3",
+        "condition": "맑음",
+        "sky": "1",
         "pty": "0",
-        "precipProb": 20
+        "precipProb": 0
       },
       {
         "date": "20261119",
-        "time": "0000",
+        "time": "0100",
         "temperature": 2.0,
         "condition": "맑음",
         "sky": "1",
@@ -57,8 +57,8 @@
       },
       {
         "date": "20261119",
-        "time": "0200",
-        "temperature": 1.0,
+        "time": "0300",
+        "temperature": 0.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -66,12 +66,12 @@
       },
       {
         "date": "20261119",
-        "time": "0400",
+        "time": "0500",
         "temperature": -1.0,
-        "condition": "눈",
-        "sky": "4",
-        "pty": "3",
-        "precipProb": 60
+        "condition": "구름많음",
+        "sky": "3",
+        "pty": "0",
+        "precipProb": 20
       }
     ],
     "daily": [
@@ -109,5 +109,5 @@
       }
     ]
   },
-  "updatedAt": "2026-11-18T08:55:28Z"
+  "updatedAt": "2026-11-18T09:00:52Z"
 }
