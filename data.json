@@ -8,20 +8,20 @@
   },
   "site6": {
     "name": "천안아이파크 6단지",
-    "perceivedTemperature": -1.6,
-    "temperature": -1.6,
-    "humidity": 71.6,
-    "occurredAt": "2026-11-20 21:53:53"
+    "perceivedTemperature": -1.4,
+    "temperature": -1.4,
+    "humidity": 71.2,
+    "occurredAt": "2026-11-20 21:58:53"
   },
   "weather": {
     "location": "충남 천안시 서북구 성성동 (천안농협하나로 성성점 인근)",
     "baseDate": "20261120",
     "baseTime": "2000",
-    "generatedAt": "2026-11-20T21:55:16+09:00",
+    "generatedAt": "2026-11-20T22:00:37+09:00",
     "hourly": [
       {
         "date": "20261120",
-        "time": "2200",
+        "time": "2300",
         "temperature": -3.0,
         "condition": "맑음",
         "sky": "1",
@@ -30,7 +30,7 @@
       },
       {
         "date": "20261121",
-        "time": "0000",
+        "time": "0100",
         "temperature": -3.0,
         "condition": "맑음",
         "sky": "1",
@@ -39,7 +39,7 @@
       },
       {
         "date": "20261121",
-        "time": "0200",
+        "time": "0300",
         "temperature": -3.0,
         "condition": "맑음",
         "sky": "1",
@@ -48,16 +48,7 @@
       },
       {
         "date": "20261121",
-        "time": "0400",
-        "temperature": -4.0,
-        "condition": "맑음",
-        "sky": "1",
-        "pty": "0",
-        "precipProb": 0
-      },
-      {
-        "date": "20261121",
-        "time": "0600",
+        "time": "0500",
         "temperature": -5.0,
         "condition": "맑음",
         "sky": "1",
@@ -66,8 +57,17 @@
       },
       {
         "date": "20261121",
-        "time": "0800",
-        "temperature": -4.0,
+        "time": "0700",
+        "temperature": -5.0,
+        "condition": "맑음",
+        "sky": "1",
+        "pty": "0",
+        "precipProb": 0
+      },
+      {
+        "date": "20261121",
+        "time": "0900",
+        "temperature": -2.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -109,5 +109,5 @@
       }
     ]
   },
-  "updatedAt": "2026-11-20T12:55:24Z"
+  "updatedAt": "2026-11-20T13:00:45Z"
 }
