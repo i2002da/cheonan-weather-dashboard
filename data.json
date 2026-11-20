@@ -10,28 +10,28 @@
     "name": "천안아이파크 6단지",
     "perceivedTemperature": 2.5,
     "temperature": 2.5,
-    "humidity": 60.6,
-    "occurredAt": "2026-11-20 14:53:56"
+    "humidity": 61.5,
+    "occurredAt": "2026-11-20 14:58:56"
   },
   "weather": {
     "location": "충남 천안시 서북구 성성동 (천안농협하나로 성성점 인근)",
     "baseDate": "20261120",
     "baseTime": "1400",
-    "generatedAt": "2026-11-20T14:55:16+09:00",
+    "generatedAt": "2026-11-20T15:00:36+09:00",
     "hourly": [
       {
         "date": "20261120",
-        "time": "1500",
-        "temperature": 3.0,
-        "condition": "흐림",
-        "sky": "4",
+        "time": "1600",
+        "temperature": 2.0,
+        "condition": "구름많음",
+        "sky": "3",
         "pty": "0",
-        "precipProb": 30
+        "precipProb": 20
       },
       {
         "date": "20261120",
-        "time": "1700",
-        "temperature": 1.0,
+        "time": "1800",
+        "temperature": 0.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -39,7 +39,7 @@
       },
       {
         "date": "20261120",
-        "time": "1900",
+        "time": "2000",
         "temperature": -2.0,
         "condition": "맑음",
         "sky": "1",
@@ -48,16 +48,7 @@
       },
       {
         "date": "20261120",
-        "time": "2100",
-        "temperature": -3.0,
-        "condition": "맑음",
-        "sky": "1",
-        "pty": "0",
-        "precipProb": 0
-      },
-      {
-        "date": "20261120",
-        "time": "2300",
+        "time": "2200",
         "temperature": -3.0,
         "condition": "맑음",
         "sky": "1",
@@ -66,7 +57,16 @@
       },
       {
         "date": "20261121",
-        "time": "0100",
+        "time": "0000",
+        "temperature": -3.0,
+        "condition": "맑음",
+        "sky": "1",
+        "pty": "0",
+        "precipProb": 0
+      },
+      {
+        "date": "20261121",
+        "time": "0200",
         "temperature": -4.0,
         "condition": "맑음",
         "sky": "1",
@@ -109,5 +109,5 @@
       }
     ]
   },
-  "updatedAt": "2026-11-20T05:55:24Z"
+  "updatedAt": "2026-11-20T06:00:43Z"
 }
