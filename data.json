@@ -10,28 +10,28 @@
     "name": "천안아이파크 6단지",
     "perceivedTemperature": 2.8,
     "temperature": 2.8,
-    "humidity": 68.8,
-    "occurredAt": "2026-11-23 04:53:41"
+    "humidity": 69.1,
+    "occurredAt": "2026-11-23 04:58:41"
   },
   "weather": {
     "location": "충남 천안시 서북구 성성동 (천안농협하나로 성성점 인근)",
     "baseDate": "20261123",
     "baseTime": "0200",
-    "generatedAt": "2026-11-23T04:55:17+09:00",
+    "generatedAt": "2026-11-23T05:00:36+09:00",
     "hourly": [
       {
         "date": "20261123",
-        "time": "0500",
+        "time": "0600",
         "temperature": 1.0,
-        "condition": "맑음",
-        "sky": "1",
+        "condition": "구름많음",
+        "sky": "3",
         "pty": "0",
-        "precipProb": 0
+        "precipProb": 20
       },
       {
         "date": "20261123",
-        "time": "0700",
-        "temperature": 2.0,
+        "time": "0800",
+        "temperature": 3.0,
         "condition": "흐림",
         "sky": "4",
         "pty": "0",
@@ -39,8 +39,8 @@
       },
       {
         "date": "20261123",
-        "time": "0900",
-        "temperature": 5.0,
+        "time": "1000",
+        "temperature": 8.0,
         "condition": "흐림",
         "sky": "4",
         "pty": "0",
@@ -48,16 +48,7 @@
       },
       {
         "date": "20261123",
-        "time": "1100",
-        "temperature": 10.0,
-        "condition": "비",
-        "sky": "4",
-        "pty": "1",
-        "precipProb": 60
-      },
-      {
-        "date": "20261123",
-        "time": "1300",
+        "time": "1200",
         "temperature": 12.0,
         "condition": "비",
         "sky": "4",
@@ -66,7 +57,16 @@
       },
       {
         "date": "20261123",
-        "time": "1500",
+        "time": "1400",
+        "temperature": 12.0,
+        "condition": "비",
+        "sky": "4",
+        "pty": "1",
+        "precipProb": 60
+      },
+      {
+        "date": "20261123",
+        "time": "1600",
         "temperature": 12.0,
         "condition": "비",
         "sky": "4",
@@ -109,5 +109,5 @@
       }
     ]
   },
-  "updatedAt": "2026-11-22T19:55:24Z"
+  "updatedAt": "2026-11-22T20:00:45Z"
 }
