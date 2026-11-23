@@ -8,21 +8,21 @@
   },
   "site6": {
     "name": "천안아이파크 6단지",
-    "perceivedTemperature": 9.4,
-    "temperature": 9.4,
-    "humidity": 81.5,
-    "occurredAt": "2026-11-23 21:53:39"
+    "perceivedTemperature": 9.2,
+    "temperature": 9.2,
+    "humidity": 81.3,
+    "occurredAt": "2026-11-23 21:58:38"
   },
   "weather": {
     "location": "충남 천안시 서북구 성성동 (천안농협하나로 성성점 인근)",
     "baseDate": "20261123",
     "baseTime": "2000",
-    "generatedAt": "2026-11-23T21:55:20+09:00",
+    "generatedAt": "2026-11-23T22:00:43+09:00",
     "hourly": [
       {
         "date": "20261123",
-        "time": "2200",
-        "temperature": 8.0,
+        "time": "2300",
+        "temperature": 7.0,
         "condition": "흐림",
         "sky": "4",
         "pty": "0",
@@ -30,17 +30,8 @@
       },
       {
         "date": "20261124",
-        "time": "0000",
-        "temperature": 6.0,
-        "condition": "흐림",
-        "sky": "4",
-        "pty": "0",
-        "precipProb": 30
-      },
-      {
-        "date": "20261124",
-        "time": "0200",
-        "temperature": 3.0,
+        "time": "0100",
+        "temperature": 5.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -48,8 +39,8 @@
       },
       {
         "date": "20261124",
-        "time": "0400",
-        "temperature": 1.0,
+        "time": "0300",
+        "temperature": 2.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -57,7 +48,16 @@
       },
       {
         "date": "20261124",
-        "time": "0600",
+        "time": "0500",
+        "temperature": 0.0,
+        "condition": "맑음",
+        "sky": "1",
+        "pty": "0",
+        "precipProb": 0
+      },
+      {
+        "date": "20261124",
+        "time": "0700",
         "temperature": 0.0,
         "condition": "구름많음",
         "sky": "3",
@@ -66,8 +66,8 @@
       },
       {
         "date": "20261124",
-        "time": "0800",
-        "temperature": 0.0,
+        "time": "0900",
+        "temperature": 1.0,
         "condition": "구름많음",
         "sky": "3",
         "pty": "0",
@@ -109,5 +109,5 @@
       }
     ]
   },
-  "updatedAt": "2026-11-23T12:55:27Z"
+  "updatedAt": "2026-11-23T13:00:50Z"
 }
