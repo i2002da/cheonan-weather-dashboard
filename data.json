@@ -8,20 +8,20 @@
   },
   "site6": {
     "name": "천안아이파크 6단지",
-    "perceivedTemperature": 9.7,
-    "temperature": 9.7,
-    "humidity": 78.8,
-    "occurredAt": "2026-11-23 14:53:38"
+    "perceivedTemperature": 8.9,
+    "temperature": 9.9,
+    "humidity": 78.1,
+    "occurredAt": "2026-11-23 14:58:39"
   },
   "weather": {
     "location": "충남 천안시 서북구 성성동 (천안농협하나로 성성점 인근)",
     "baseDate": "20261123",
     "baseTime": "1400",
-    "generatedAt": "2026-11-23T14:55:20+09:00",
+    "generatedAt": "2026-11-23T15:00:36+09:00",
     "hourly": [
       {
         "date": "20261123",
-        "time": "1500",
+        "time": "1600",
         "temperature": 12.0,
         "condition": "비",
         "sky": "4",
@@ -30,16 +30,7 @@
       },
       {
         "date": "20261123",
-        "time": "1700",
-        "temperature": 11.0,
-        "condition": "비",
-        "sky": "4",
-        "pty": "1",
-        "precipProb": 60
-      },
-      {
-        "date": "20261123",
-        "time": "1900",
+        "time": "1800",
         "temperature": 10.0,
         "condition": "비",
         "sky": "4",
@@ -48,8 +39,8 @@
       },
       {
         "date": "20261123",
-        "time": "2100",
-        "temperature": 9.0,
+        "time": "2000",
+        "temperature": 10.0,
         "condition": "비",
         "sky": "4",
         "pty": "1",
@@ -57,8 +48,8 @@
       },
       {
         "date": "20261123",
-        "time": "2300",
-        "temperature": 7.0,
+        "time": "2200",
+        "temperature": 8.0,
         "condition": "흐림",
         "sky": "4",
         "pty": "0",
@@ -66,8 +57,17 @@
       },
       {
         "date": "20261124",
-        "time": "0100",
-        "temperature": 4.0,
+        "time": "0000",
+        "temperature": 5.0,
+        "condition": "흐림",
+        "sky": "4",
+        "pty": "0",
+        "precipProb": 30
+      },
+      {
+        "date": "20261124",
+        "time": "0200",
+        "temperature": 2.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -109,5 +109,5 @@
       }
     ]
   },
-  "updatedAt": "2026-11-23T05:55:26Z"
+  "updatedAt": "2026-11-23T06:00:43Z"
 }
