@@ -8,21 +8,21 @@
   },
   "site6": {
     "name": "천안아이파크 6단지",
-    "perceivedTemperature": 8.6,
-    "temperature": 8.6,
-    "humidity": 84.7,
-    "occurredAt": "2026-11-27 07:53:20"
+    "perceivedTemperature": 8.4,
+    "temperature": 8.4,
+    "humidity": 84.6,
+    "occurredAt": "2026-11-27 07:58:21"
   },
   "weather": {
     "location": "충남 천안시 서북구 성성동 (천안농협하나로 성성점 인근)",
     "baseDate": "20261127",
     "baseTime": "0500",
-    "generatedAt": "2026-11-27T07:55:24+09:00",
+    "generatedAt": "2026-11-27T08:00:37+09:00",
     "hourly": [
       {
         "date": "20261127",
-        "time": "0800",
-        "temperature": 9.0,
+        "time": "0900",
+        "temperature": 11.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -30,8 +30,8 @@
       },
       {
         "date": "20261127",
-        "time": "1000",
-        "temperature": 13.0,
+        "time": "1100",
+        "temperature": 15.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -39,16 +39,7 @@
       },
       {
         "date": "20261127",
-        "time": "1200",
-        "temperature": 17.0,
-        "condition": "맑음",
-        "sky": "1",
-        "pty": "0",
-        "precipProb": 0
-      },
-      {
-        "date": "20261127",
-        "time": "1400",
+        "time": "1300",
         "temperature": 18.0,
         "condition": "흐림",
         "sky": "4",
@@ -57,8 +48,17 @@
       },
       {
         "date": "20261127",
-        "time": "1600",
-        "temperature": 17.0,
+        "time": "1500",
+        "temperature": 18.0,
+        "condition": "흐림",
+        "sky": "4",
+        "pty": "0",
+        "precipProb": 30
+      },
+      {
+        "date": "20261127",
+        "time": "1700",
+        "temperature": 15.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -66,8 +66,8 @@
       },
       {
         "date": "20261127",
-        "time": "1800",
-        "temperature": 14.0,
+        "time": "1900",
+        "temperature": 13.0,
         "condition": "흐림",
         "sky": "4",
         "pty": "0",
@@ -109,5 +109,5 @@
       }
     ]
   },
-  "updatedAt": "2026-11-26T22:55:29Z"
+  "updatedAt": "2026-11-26T23:00:46Z"
 }
