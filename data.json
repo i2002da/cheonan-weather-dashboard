@@ -8,20 +8,20 @@
   },
   "site6": {
     "name": "천안아이파크 6단지",
-    "perceivedTemperature": 6.1,
-    "temperature": 8.7,
-    "humidity": 57.2,
-    "occurredAt": "2026-11-28 13:53:29"
+    "perceivedTemperature": 6.4,
+    "temperature": 8.9,
+    "humidity": 58.9,
+    "occurredAt": "2026-11-28 13:58:29"
   },
   "weather": {
     "location": "충남 천안시 서북구 성성동 (천안농협하나로 성성점 인근)",
     "baseDate": "20261128",
     "baseTime": "1100",
-    "generatedAt": "2026-11-28T13:55:24+09:00",
+    "generatedAt": "2026-11-28T14:00:36+09:00",
     "hourly": [
       {
         "date": "20261128",
-        "time": "1400",
+        "time": "1500",
         "temperature": 9.0,
         "condition": "비",
         "sky": "4",
@@ -30,25 +30,16 @@
       },
       {
         "date": "20261128",
-        "time": "1600",
-        "temperature": 8.0,
-        "condition": "비",
-        "sky": "4",
-        "pty": "1",
-        "precipProb": 60
-      },
-      {
-        "date": "20261128",
-        "time": "1800",
-        "temperature": 5.0,
-        "condition": "맑음",
-        "sky": "1",
+        "time": "1700",
+        "temperature": 6.0,
+        "condition": "구름많음",
+        "sky": "3",
         "pty": "0",
-        "precipProb": 0
+        "precipProb": 20
       },
       {
         "date": "20261128",
-        "time": "2000",
+        "time": "1900",
         "temperature": 4.0,
         "condition": "맑음",
         "sky": "1",
@@ -57,7 +48,16 @@
       },
       {
         "date": "20261128",
-        "time": "2200",
+        "time": "2100",
+        "temperature": 3.0,
+        "condition": "맑음",
+        "sky": "1",
+        "pty": "0",
+        "precipProb": 0
+      },
+      {
+        "date": "20261128",
+        "time": "2300",
         "temperature": 3.0,
         "condition": "맑음",
         "sky": "1",
@@ -66,8 +66,8 @@
       },
       {
         "date": "20261129",
-        "time": "0000",
-        "temperature": 2.0,
+        "time": "0100",
+        "temperature": 1.0,
         "condition": "맑음",
         "sky": "1",
         "pty": "0",
@@ -109,5 +109,5 @@
       }
     ]
   },
-  "updatedAt": "2026-11-28T04:55:30Z"
+  "updatedAt": "2026-11-28T05:00:43Z"
 }
